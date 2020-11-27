@@ -1,0 +1,9 @@
+flask == 1.0.2
+structlog
+flask_humanize
+flask-login
+twisted == 19.2.0
+werkzeug == 0.15.2
+psycopg2
+sqlalchemy
+marshmallow
