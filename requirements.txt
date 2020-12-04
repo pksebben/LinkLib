@@ -3,7 +3,7 @@ structlog
 flask_humanize
 flask-login
 twisted == 19.2.0
-werkzeug == 0.15.2
-psycopg2
+werkzeug == 1.0.1 
+psycopg2-binary
 sqlalchemy
 marshmallow
