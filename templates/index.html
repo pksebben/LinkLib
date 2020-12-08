@@ -2,50 +2,165 @@
 <!-- following the advice here: https://pythonise.com/categories/javascript/infinite-lazy-loading -->
 <html>
     <head>
-	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     </head>
     <body>
-	<h1>It's working!</h1>
-    </body>
-    <select class="link-buffer-selector">
-	{% for stream in streams %}
-	<option value="stream.id">{{ stream.name }}</option>
-	{% endfor %}
-    </select>
-    <div class="link-buffer">
+
+	<div class="header">
+	    <h1>Recurse Library</h1>
+	    <img src="https://imgs.xkcd.com/comics/standards.png" href="https://xkcd.com/927/" />
+	    <h3>What is this?</h3>
+	    <p>Welcome to the Recurse Library.  At the moment, it isn't much, but that's because I wanted to provide a place for us to discuss what it should be. When first joining RC, a few of us were frustrated by a lack of cohesion between all the various and sundry *things* that recurse has to offer; blaggregator, zulip streams, the wiki, the orientation materials.  It wasn't that these things weren't any good (on the contrary, they were mostly quite rich) it was that they suffered from a lack of 1. Discoverability and 2. Indexing.  There were multiple sources of truth and it was a little difficult to figure out where to go to get the best sauce on a particular topic.</p>
+	    <p>The library is my attempt to address this.  I have two opinions on what the library should be / do, but beyond that what I would really like is for the rest of Recurse to pitch ideas into the pot until we have a stone soup of information persistence that tastes great fro all of us.</p>
+	    <h4>My Two Opinions:</h4>
+	    <p>1. It should be configurable and moddifiable by all, and establish a smooth experience for those who want to contribute.</p>
+	    <p>2. It should establish persistence and Discoverability by posting to zulip periodically, to remind all of it's existence and to drive engagement.</p>
+	    <p>Below, you will find a sample of link data from all past Zulip streams.  These have been culled on some fairly rough heuristics and will need further gardening to increase their utility as a store of knowledge, but I wanted to include them here as an example of one thing I think a platform like this should do: that is, make good information available in a format that makes it useful.</p>
+	    <p>You will also find a comment section.  This is where I want to start the discussion of what the perfect information persistence platform would look like to each of us.  </p>
+	    
+	</div>
+	</div>
 	
-	<div class="link-placeholder">
-	    <h3 class="link-url-header">link.url</h3>
-	    <p class="link-domain">link.domain</p>
-	    <p class="link-streamname">link.stream_name</p>
-	    <ul class="link-tags">tag for tag in link.tags</ul>
-	    <p class="link-messageid">link.message_id</p>
-	    <p class="link-description">link.description</p>
-	    <div class="link-comment-section">
-		<div class="link-comment-section-add-comment">
-		    <h4>here, I want people to be able to comment on a shared link</h4>
+	<div class="container">
+	    <div class="row">
+
+		<div class="col-sm">
+		    <div class="link-section-header">
+			<h2>The Links</h2>
+			<p>Here they are, the Zulip links.  Each link has an associated comment thread, buttons to flag the link as "high-value", "interesting", or even "candidate for culling" (in the likely event that it does not represent something likely to be interesting to anyone outside of the conversation in which it originated).  In the comments, you can vote to pin a comment as a permanent sort of link description, which will bubble it to the top of the conversation so that it's the first thing someone sees when they see the link (hopefully, reducing the amount of time spent assessing what to click)</p>
+			<p>Links are sorted by categories that map perfectly to the zulip streams.  If a link is in the wrong stream, or belongs in multiple streams, you can flag it as such using the provided flags.  We expect that this will be the case fairly often.</p>
+		    </div>
+		    <select class="link-buffer-selector" id="link-buffer-selector">
+			{% for stream in streams %}
+			<option value={{ stream["id"] }}>{{ stream["name"] }}</option>
+			{% endfor %}
+		    </select>
+		    <!-- following nav added b/c: https://pythonise.com/categories/javascript/infinite-lazy-loading -->
+		    <nav class="navbar navbar-light bg-light sticky-top">
+			<div class="container">
+			    <a class="navbar-brand" id="loaded" href="#">0 items loaded</a>
+			</div>
+		    </nav>
+
+		    <div class="link-buffer" id="link-buffer">
+			
+			<div class="link-template" id="link-template">
+			    <h3 class="link-url-header">link.url</h3>
+			    <p class="link-domain">link.domain</p>
+			    <p class="link-streamname">link.stream_name</p>
+			    <ul class="link-tags">tag for tag in link.tags</ul>
+			    <p class="link-messageid">link.message_id</p>
+			    <p class="link-description">link.description</p>
+			    <div class="link-comment-section">
+				<div class="link-comment-section-add-comment">
+				    <h4>here, I want people to be able to comment on a shared link</h4>
+				</div>
+			    </div>
+			</div>
+			<div class="d-flex justify-content-center mb-3" id="sentinel">
+			    <div class="spinner-border" role="status"></div>
+			</div>
+		    </div>
+		</div>
+
+		<div class="col-sm">
+		    <h2 class="rfc-header-title">Request For Comments</h2>
+		    <p class="rfc-header-greeting">I know, I know, it's not pretty.  I didn't want to waste valuable time dolling it up at the cost of not having it available for you guys to look at, because I want the development of this platform to be as democratic as possible.  I extend the heartiest of invitations to comment, critique, make suggestions, anything.  There are no bad ideas.  My intent is that we collectively use this site as a vehilcle to help future batches (and, if we do it right, benefit from easy access to their contributions) and a way for all recursers; past, present, and future, to share the juiciest and most fascinating things they come across.  The links are just here to start the conversation - what would <bold>you</bold> like to tell the world?</p>
+		    <div class="rfc-buffer">
+			<div class="comment-input">
+			    <p class="comment-input-cta">Let's talk about it!</p>
+			    <textarea class="comment-input-text"></textarea>
+			    <button class="comment-input-submit">submit</button>
+			</div>
+			<div class="comment-placeholder">
+			    <h3 class="comment-username">comment.username</h3>
+			    <p class="comment-timestamp">comment.timestamp</p>
+			    <p class="comment-body">comment.body</p>
+			    <div class="comment-children-comments">
+				<h4>place comment tree here</h4>
+			    </div>
+			</div>
+		    </div>
+		    <div class="d-flex justify-content-center mb-3" id="sentinel">
+			<div class="spinner-border" role="status"></div>
+		    </div>
 		</div>
 	    </div>
 	</div>
-    </div>
-    <h2 class="rfc-header-title">Request For Comments</h2>
-    <p class="rfc-header-greeting">I know, I know, it's not pretty.  I didn't want to waste valuable time dolling it up at the cost of not having it available for you guys to look at, because I want the development of this platform to be as democratic as possible.  I extend the heartiest of invitations to comment, critique, make suggestions, anything.  There are no bad ideas.  My intent is that we collectively use this site as a vehilcle to help future batches (and, if we do it right, benefit from easy access to their contributions) and a way for all recursers; past, present, and future, to share the juiciest and most fascinating things they come across.  The links are just here to start the conversation - what would <bold>you</bold> like to tell the world?</p>
-    <div class="rfc-buffer">
-	<div class="comment-input">
-	    <p class="comment-input-cta">Let's talk about it!</p>
-	    <textarea class="comment-input-text"></textarea>
-	    <button class="comment-input-submit">submit</button>
-	</div>
-	<div class="comment-placeholder">
-	    <h3 class="comment-username">comment.username</h3>
-	    <p class="comment-timestamp">comment.timestamp</p>
-	    <p class="comment-body">comment.body</p>
-	    <div class="comment-children-comments">
-		<h4>place comment tree here</h4>
-	    </div>
-	</div>
-    </div>
-    <div class="d-flex justify-content-center mb-3" id="sentinel">
-	<div class="spinner-border" role="status"></div>
-    </div>
+    </body>
+    <script>
+     // Get references to the dom elements
+     var scroller = document.querySelector("#link-buffer");
+     var template = document.querySelector('#link-template');
+     var loaded = document.querySelector("#loaded");
+     var sentinel = document.querySelector('#sentinel');
+
+     // Set a counter to count the items loaded
+     var counter = 0;
+
+     // Function to request new items and render to the dom
+     function loadItems() {
+
+	 // Use fetch to request data and pass the counter value in the QS
+	 fetch(`/load?c=${counter}`).then((response) => {
+
+	     // Convert the response data to JSON
+	     response.json().then((data) => {
+
+		 // If empty JSON, exit the function
+		 if (!data.length) {
+
+		     // Replace the spinner with "No more posts"
+		     sentinel.innerHTML = "No more posts";
+		     return;
+		 }
+
+		 // Iterate over the items in the response
+		 for (var i = 0; i < data.length; i++) {
+
+		     // Clone the HTML template
+		     let template_clone = template.content.cloneNode(true);
+
+		     // Query & update the template content
+		     template_clone.querySelector("#title").innerHTML = `${data[i][0]}: ${data[i][1]}`;
+		     template_clone.querySelector("#content").innerHTML = data[i][2];
+
+		     // Append template to dom
+		     scroller.appendChild(template_clone);
+
+		     // Increment the counter
+		     counter += 1;
+
+		     // Update the counter in the navbar
+		     loaded.innerText = `${counter} items loaded`;
+
+		 }
+	     })
+	 })
+     }
+
+     // Create a new IntersectionObserver instance
+     var intersectionObserver = new IntersectionObserver(entries => {
+
+	 // Uncomment below to see the entry.intersectionRatio when
+	 // the sentinel comes into view
+
+	 // entries.forEach(entry => {
+	 //   console.log(entry.intersectionRatio);
+	 // })
+
+	 // If intersectionRatio is 0, the sentinel is out of view
+	 // and we don't need to do anything. Exit the function
+	 if (entries[0].intersectionRatio <= 0) {
+	     return;
+	 }
+
+	 // Call the loadItems function
+	 loadItems();
+
+     });
+
+     // Instruct the IntersectionObserver to watch the sentinel
+     intersectionObserver.observe(sentinel);
+    </script>
 </html>

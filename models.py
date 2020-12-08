@@ -28,5 +28,5 @@ class Link(Base):
     message_id = Column(Integer)
     relevance_score = Column(Integer)
     timestamp = Column(String)  # TODO: make me a date
-
+    tags = Column(String)
 
