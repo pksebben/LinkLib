@@ -1,4 +1,5 @@
 flask == 1.0.2
+oauthlib
 structlog
 flask_humanize
 flask-login
