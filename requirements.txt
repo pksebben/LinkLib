@@ -1,6 +1,8 @@
 flask == 1.0.2
+requests
 oauthlib
 structlog
+pyOpenSSL
 flask_humanize
 flask-login
 twisted == 19.2.0
