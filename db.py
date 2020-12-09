@@ -1,6 +1,6 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-import models
+import models, plugin
 
 """
 prepares a connection to sqlalchemy.
@@ -10,11 +10,12 @@ db.sqla.session.query(models.Foo)
 """
 
 
-CONN_STRING = "sqlite:///foo.db"
+CONN_STRING = "sqlite:///links.db"
 
 sqla = None
 
 def init(app):
+    print("init db")
     global sqla
     sqla = plugin.SQLAlchemy(app, CONN_STRING)
-    models.base.metadata.create_all(sqla.engine)
+    models.Base.metadata.create_all(sqla.engine)

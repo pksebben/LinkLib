@@ -1,4 +1,6 @@
 __pycache__/
+links.db
+*.db
 linklibvenv/
 foo.db
 streamlist.json
