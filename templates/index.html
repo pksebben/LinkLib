@@ -30,7 +30,7 @@
 			<p>Here they are, the Zulip links.  Each link has an associated comment thread, buttons to flag the link as "high-value", "interesting", or even "candidate for culling" (in the likely event that it does not represent something likely to be interesting to anyone outside of the conversation in which it originated).  In the comments, you can vote to pin a comment as a permanent sort of link description, which will bubble it to the top of the conversation so that it's the first thing someone sees when they see the link (hopefully, reducing the amount of time spent assessing what to click)</p>
 			<p>Links are sorted by categories that map perfectly to the zulip streams.  If a link is in the wrong stream, or belongs in multiple streams, you can flag it as such using the provided flags.  We expect that this will be the case fairly often.</p>
 		    </div>
-		    <select class="link-buffer-selector" id="stream-selector">
+		    <select class="link-buffer-selector" id="stream-selector" onchange=reload_linkbuffer()>
 			{% for stream in streams %}
 			<option value={{ stream["stream_id"] }}>{{ stream["name"] }}</option>
 			{% endfor %}
@@ -103,45 +103,42 @@
      // Set a counter to count the items loaded
      var counter = 0;
 
+     function reload_linkbuffer() {
+	 var linkbuffer = document.querySelector("#link-buffer");
+	 linkbuffer.innerHTML = "";
+	 // TODO: finish
+     }
+
      // Function to request new items and render to the dom
      function loadItems() {
 	 const stream_id_selector = document.querySelector('#stream-selector');
 	 stream_id = stream_id_selector.value;
-	 
 
-	 // Use fetch to request data and pass the counter value in the QS
 	 fetch(`/load/${stream_id}?c=${counter}`).then((response) => {
-
+	     
 	     // Convert the response data to JSON
 	     response.json().then((data) => {
-
-		 // If empty JSON, exit the function
 		 if (!data.length) {
-
-		     // Replace the spinner with "No more posts"
 		     sentinel.innerHTML = "No more posts";
 		     return;
 		 }
 
-		 // Iterate over the items in the response
 		 for (var i = 0; i < data.length; i++) {
 
-		     // Clone the HTML template
 		     let template_clone = template.content.cloneNode(true);
-
-		     // Query & update the template content
-
 
 		     /* Load link/post data into infinite scroller */
 		     /* actual link url */
 		     template_clone.querySelector("#uri").innerHTML = data[i]['url'];
 		     template_clone.querySelector("#uri").href = data[i]['url'];
 		     /* link to discussion page */
-		     template_clone.querySelector("#link-page-link").href = ["/link/", data[i]['id']].join("")
+		     template_clone.querySelector("#link-page-link").href = ["/link/", data[i]['id']].join("");
 		     /* TODO: should be replaced by stream-name */
-		     template_clone.querySelector('#link-stream').innerHTML = data[i]["stream_id"]
+		     template_clone.querySelector('#link-stream').innerHTML = data[i]["stream_id"];
 		     /* TODO: this should link out to zulipchat and narrow by message_id */
-		     template_clone.querySelector("#link-message-link").href = ["https://recurse.zulipchat.com/id/", data[i]["message_id"]].join("")
+		     
+		     template_clone.querySelector("#link-message-link").href = ["https://recurse.zulipchat.com/narrow/id/", data[i]["message_id"] ].join("")
+
 		     template_clone.querySelector("#content").innerHTML = data[i][2];
 
 		     // Append template to dom
@@ -152,11 +149,14 @@
 
 		     // Update the counter in the navbar
 		     loaded.innerText = `${counter} items loaded`;
-
+		     
 		 }
-	     })
-	 })
-     }
+	     }
+	     )
+	     
+	 }
+	 )
+     }	     
 
      // Create a new IntersectionObserver instance
      var intersectionObserver = new IntersectionObserver(entries => {

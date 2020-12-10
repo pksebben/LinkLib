@@ -1,23 +1,36 @@
-import flask
 import sys
-import structlog
 import logging
+
+import structlog
 from structlog import twisted, get_logger
 from twisted.python import log
 from jinja2 import PackageLoader
+
+import flask
 from flask_humanize import Humanize
 from flask import json
+from flask_login import LoginManager
 
-from views import index, link
-import db
-import container
+from views import index, link, register
+from views import login as login_view
+import db, container, models
 
 ENDPOINT = "tcp:8080"
 DEBUG = True
 
+login = LoginManager()
+login.login_view = "login_view.login"
+
+@login.user_loader
+def load_user(id):
+    return db.sqla.session.query(models.User).get(int(id))
 
 app = flask.Flask(__name__, static_folder='static')
 app.jinja_loader = PackageLoader(__name__, 'templates')
+
+app.secret_key = 'thereoncewasamanfromnantucketwhosethingwassolonghecouldbucket'
+login.init_app(app)
+
 
 def main():
     container.run(app, ENDPOINT, DEBUG)
@@ -29,30 +42,6 @@ def init(blueprints):
     app.jinja_env.auto_reload = True
 
     return app
-
-
-# maybe we don't need this.
-# from sqlalchemy.ext.declarative import DeclarativeMeta
-
-# class AlchemyEncoder(json.JSONEncoder):
-
-#     def default(self, obj):
-#         if isinstance(obj.__class__, DeclarativeMeta):
-#             # an SQLAlchemy class
-#             fields = {}
-#             for field in [x for x in dir(obj) if not x.startswith('_') and x != 'metadata']:
-#                 data = obj.__getattribute__(field)
-#                 try:
-#                     json.dumps(data) # this will fail on non-encodable values, like other classes
-#                     fields[field] = data
-#                 except TypeError:
-#                     fields[field] = None
-#             # a json-encodable dict
-#             return fields
-
-#         return json.JSONEncoder.default(self, obj)
-
-
 
 
 if __name__ == "__main__":
@@ -71,5 +60,5 @@ if __name__ == "__main__":
         cache_logger_on_first_use=True
     )
 
-    init([index, link])
+    init([index, link, login_view, register])
     main()
