@@ -32,14 +32,17 @@ def load(streamid):
         if stream_id == streamid:
             print("loading links from stream: " + str(stream_id) )
             counter = int(flask.request.args.get("c"))
-            links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream_id).all()
-            print(links)
+            # links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream_id).all()
+            # links = filter_by_stream(stream_id)
+            links = advanced_filter(stream_id = stream_id)
 
         else:
             print("loading links from stream: " + str(stream_id))
             counter = 0
             stream_id = streamid
-            links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream_id).all()
+            links = advanced_filter(stream_id=stream_id)
+        
+            # links = filter_by_stream(stream_id)
             
         if counter == 0:
             print(f"returning posts: 0 :: {quantity}")
@@ -59,6 +62,18 @@ def load(streamid):
             res = flask.make_response(jsonify(l), 200)
 
         return res
+
+def filter_by_stream(stream):
+    links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream).all()
+    return links
+    
+def advanced_filter(**kwargs):
+    query = db.sqla.session.query(models.Link)
+    print("base query ::")
+    print(query)
+    for k, v in kwargs.items():
+        query = query.filter(getattr(models.Link, k) == str(v))
+    return query.all()
 
 @bp.route('/', methods=["GET"])
 @login_required
