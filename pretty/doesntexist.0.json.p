@@ -1,0 +1,112 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/1000/1cd87892343b6620726b112851f0b66cbda4a68f?x=x&version=4",
+            "client": "Internal",
+            "content": "<p>Welcome to <a class=\"stream\" data-stream-id=\"113018\" href=\"/#narrow/stream/doesntexist\">#doesntexist</a>.</p>\n<p><strong>Description</strong>: this stream does not exist</p>",
+            "content_type": "text/html",
+            "display_recipient": "doesntexist",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 122759936,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 126576,
+            "sender_email": "welcome-bot@zulip.com",
+            "sender_full_name": "Welcome Bot",
+            "sender_id": 100007,
+            "sender_realm_str": "zulipcore",
+            "stream_id": 113018,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1519165173,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/a6ed9b3bad63f9b533c8c1eddb9baf0affe82a07?x=x&version=1",
+            "client": "website",
+            "content": "<p>you are correct</p>",
+            "content_type": "text/html",
+            "display_recipient": "doesntexist",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 122759986,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 126576,
+            "sender_email": "john.danger.xia@gmail.com",
+            "sender_full_name": "John Xia (he) (F2'18)",
+            "sender_id": 8472,
+            "sender_realm_str": "recurse",
+            "stream_id": 113018,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1519165228,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/a6ed9b3bad63f9b533c8c1eddb9baf0affe82a07?x=x&version=1",
+            "client": "website",
+            "content": "<p>this stream still does not exist</p>",
+            "content_type": "text/html",
+            "display_recipient": "doesntexist",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 122906785,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 126576,
+            "sender_email": "john.danger.xia@gmail.com",
+            "sender_full_name": "John Xia (he) (F2'18)",
+            "sender_id": 8472,
+            "sender_realm_str": "recurse",
+            "stream_id": 113018,
+            "subject": "(no topic)",
+            "submessages": [],
+            "timestamp": 1519441496,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/a6ed9b3bad63f9b533c8c1eddb9baf0affe82a07?x=x&version=1",
+            "client": "website",
+            "content": "<p>(deleted)</p>",
+            "content_type": "text/html",
+            "display_recipient": "doesntexist",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 127967986,
+            "is_me_message": false,
+            "last_edit_timestamp": 1528829031,
+            "reactions": [],
+            "recipient_id": 126576,
+            "sender_email": "john.danger.xia@gmail.com",
+            "sender_full_name": "John Xia (he) (F2'18)",
+            "sender_id": 8472,
+            "sender_realm_str": "recurse",
+            "stream_id": 113018,
+            "subject": "(deleted)",
+            "submessages": [],
+            "timestamp": 1528828999,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}

@@ -1,0 +1,112 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/1000/1cd87892343b6620726b112851f0b66cbda4a68f?x=x&version=4",
+            "client": "Internal",
+            "content": "<p>Welcome to <a class=\"stream\" data-stream-id=\"191934\" href=\"/#narrow/stream/191934-perl\">#perl</a>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "perl",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 161022147,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 313900,
+            "sender_email": "welcome-bot@zulip.com",
+            "sender_full_name": "Welcome Bot",
+            "sender_id": 100007,
+            "sender_realm_str": "zulipcore",
+            "stream_id": 191934,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1552869046,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/317fbbc77f88bb984337d8e6030dd1218ff59252?x=x&version=9",
+            "client": "ZulipElectron",
+            "content": "<p><a href=\"https://perl6.org/downloads/\" target=\"_blank\" title=\"https://perl6.org/downloads/\">download Perl 6</a><br>\n<a href=\"https://perl6intro.com/\" target=\"_blank\" title=\"https://perl6intro.com/\">intro to Perl 6</a><br>\n<a href=\"https://learnxinyminutes.com/docs/perl6/\" target=\"_blank\" title=\"https://learnxinyminutes.com/docs/perl6/\">learn x in y</a><br>\n<a href=\"https://www.evanmiller.org/why-im-learning-perl-6.html\" target=\"_blank\" title=\"https://www.evanmiller.org/why-im-learning-perl-6.html\">Why I'm learning Perl6</a><br>\n<a href=\"https://docs.perl6.org/type/Range\" target=\"_blank\" title=\"https://docs.perl6.org/type/Range\">ranges</a><br>\n<a href=\"https://docs.perl6.org/language/py-nutshell\" target=\"_blank\" title=\"https://docs.perl6.org/language/py-nutshell\">Python to Perl 6</a><br>\n<a href=\"https://docs.perl6.org/language/rb-nutshell\" target=\"_blank\" title=\"https://docs.perl6.org/language/rb-nutshell\">Ruby to Perl 6</a><br>\n<a href=\"https://docs.perl6.org/language/js-nutshell\" target=\"_blank\" title=\"https://docs.perl6.org/language/js-nutshell\">Javascript to Perl 6</a><br>\n<a href=\"https://docs.perl6.org/language/haskell-to-p6\" target=\"_blank\" title=\"https://docs.perl6.org/language/haskell-to-p6\">Haskell to Perl 6</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "perl",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 161027847,
+            "is_me_message": false,
+            "last_edit_timestamp": 1553192436,
+            "reactions": [],
+            "recipient_id": 313900,
+            "sender_email": "charles.lu@columbia.edu",
+            "sender_full_name": "Charlie Lu (W2'19)",
+            "sender_id": 158530,
+            "sender_realm_str": "recurse",
+            "stream_id": 191934,
+            "subject": "Perl 6",
+            "submessages": [],
+            "timestamp": 1552879273,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/317fbbc77f88bb984337d8e6030dd1218ff59252?x=x&version=9",
+            "client": "ZulipElectron",
+            "content": "<p><a href=\"https://www.youtube.com/watch?v=Nq2HkAYbG5o\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=Nq2HkAYbG5o\">https://www.youtube.com/watch?v=Nq2HkAYbG5o</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"Nq2HkAYbG5o\" href=\"https://www.youtube.com/watch?v=Nq2HkAYbG5o\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=Nq2HkAYbG5o\"><img src=\"https://i.ytimg.com/vi/Nq2HkAYbG5o/default.jpg\"></a></div>",
+            "content_type": "text/html",
+            "display_recipient": "perl",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 161299443,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 313900,
+            "sender_email": "charles.lu@columbia.edu",
+            "sender_full_name": "Charlie Lu (W2'19)",
+            "sender_id": 158530,
+            "sender_realm_str": "recurse",
+            "stream_id": 191934,
+            "subject": "Perl 6",
+            "submessages": [],
+            "timestamp": 1553122564,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/317fbbc77f88bb984337d8e6030dd1218ff59252?x=x&version=9",
+            "client": "ZulipElectron",
+            "content": "<p><a href=\"https://github.com/dnmfarrell/Perl6-One-Liners\" target=\"_blank\" title=\"https://github.com/dnmfarrell/Perl6-One-Liners\">https://github.com/dnmfarrell/Perl6-One-Liners</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "perl",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 161726970,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 313900,
+            "sender_email": "charles.lu@columbia.edu",
+            "sender_full_name": "Charlie Lu (W2'19)",
+            "sender_id": 158530,
+            "sender_realm_str": "recurse",
+            "stream_id": 191934,
+            "subject": "Perl 6",
+            "submessages": [],
+            "timestamp": 1553570169,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}

@@ -1,0 +1,2282 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/e4681bc5bff25e25068895223319c149ef4d898f?x=x&version=1",
+            "client": "desktop app Mac 0.5.2",
+            "content": "<p>i've had the idea of recording a conversation, annotating the flow of topics, and also intent of everything that's said, and visualizing it (without hte original conversation)</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105485527,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "davidelu93@gmail.com",
+            "sender_full_name": "David E Lu (he) (W1'16)",
+            "sender_id": 100322,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "conversations",
+            "submessages": [],
+            "timestamp": 1483744097,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/28427e9335cecebc2d8cadc90c1bd46516bd589f?x=x&version=3",
+            "client": "website",
+            "content": "<p><img alt=\":heart:\" class=\"emoji\" src=\"/static/third/gemoji/images/emoji/heart.png\" title=\":heart:\"> <img alt=\":heart:\" class=\"emoji\" src=\"/static/third/gemoji/images/emoji/heart.png\" title=\":heart:\"> <img alt=\":heart:\" class=\"emoji\" src=\"/static/third/gemoji/images/emoji/heart.png\" title=\":heart:\"> </p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105486005,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "darthmincho@gmail.com",
+            "sender_full_name": "Carlos Rey (SP2'15)",
+            "sender_id": 7875,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "conversations",
+            "submessages": [],
+            "timestamp": 1483745053,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Hey friends! I was thinking it'd be cool if we could meet in-person every week or so and either show off visualizations we've come across/built or teach people how to build something we've figured out how to do. It can even be something completely different if you think that's valuable!  <img alt=\":cat_face:\" class=\"emoji\" src=\"/static/generated/emoji/images/emoji/cat_face.png\" title=\":cat_face:\"> <br>\nIf you're interested in doing that, I was thinking we could meet tomorrow (Tuesday) at 11? Let me know if that time works for you or if we should aim for a different time!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105584699,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483979200,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/7f46ed3d8ea9577412b8d94ed3699076?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><img alt=\":+1:\" class=\"emoji\" src=\"/static/generated/emoji/images/emoji/+1.png\" title=\":+1:\"></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105584715,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "klschoen@gmail.com",
+            "sender_full_name": "Katrina Schoen (W2'17)",
+            "sender_id": 100454,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483979257,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/144877ed988449d7b6d0ff344f31279f?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>I'll be there.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105585593,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "chrisedgemon@gmail.com",
+            "sender_full_name": "Christopher Edgemon (he) (W2'17)",
+            "sender_id": 831,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483980399,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/fcef17f669c2af346eb5d6fab1c1f4bf?d=identicon&version=13",
+            "client": "website",
+            "content": "<p>I'll be there too :)</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105585628,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "choisinsauce@gmail.com",
+            "sender_full_name": "Grace Choi (she) (W2'17)",
+            "sender_id": 100457,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483980469,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>rsvp init</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587447,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983310,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/0ddf86bf31f43bb32425becd9876aed31ba9796d?x=x&version=1",
+            "client": "ZulipPython",
+            "content": "<p>This thread is now an RSVPBot event! Type <code>rsvp help</code> for more options.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587448,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "rsvp_bot-bot@students.hackerschool.com",
+            "sender_full_name": "RSVPBot",
+            "sender_id": 7960,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983310,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>rsvp set date tomorrow</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587451,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983322,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>rsvp set time 11am</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587454,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983327,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>rsvp set description data vis interest group: bring vizes you've made or vizes you want to share or questions or answers or ideas</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587499,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983383,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>rsvp set time 11:00</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105587564,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483983486,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/fcef17f669c2af346eb5d6fab1c1f4bf?d=identicon&version=13",
+            "client": "website",
+            "content": "<p>rsvp yes</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105588908,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "choisinsauce@gmail.com",
+            "sender_full_name": "Grace Choi (she) (W2'17)",
+            "sender_id": 100457,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1483985899,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>We're taking over Hopper if anyone wants to join!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105629804,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "meeting",
+            "submessages": [],
+            "timestamp": 1484065291,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/c4c258861139608c3bf0c54b67094d45?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"https://gist.github.com/gugzkumar/d41e25419dcfacc7fd01be4b46c9f46f\" target=\"_blank\" title=\"https://gist.github.com/gugzkumar/d41e25419dcfacc7fd01be4b46c9f46f\">https://gist.github.com/gugzkumar/d41e25419dcfacc7fd01be4b46c9f46f</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105631438,
+            "is_me_message": false,
+            "last_edit_timestamp": 1484067952,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gagantunuguntla@saimail.com",
+            "sender_full_name": "Gagan Kumar Tunuguntla (W2'17)",
+            "sender_id": 100462,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "BasketballStats",
+            "submessages": [],
+            "timestamp": 1484067937,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Thanks for coming today! Shout-out to Alec and Gagan for their impromptu presentations! </p>\n<p>Here's a sign-up for next week. If everyone can think of something to talk about, that'd be awesome, but no pressure if you're uncomfortable <img alt=\":smile_cat:\" class=\"emoji\" src=\"/static/generated/emoji/images/emoji/smile_cat.png\" title=\":smile_cat:\"> <br>\n<a href=\"https://docs.google.com/spreadsheets/d/1e6e4N1Wk0R22FTUX5eQ5_00_UUC-PMyp6lgICVBOM0Q/edit?usp=sharing\" target=\"_blank\" title=\"https://docs.google.com/spreadsheets/d/1e6e4N1Wk0R22FTUX5eQ5_00_UUC-PMyp6lgICVBOM0Q/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1e6e4N1Wk0R22FTUX5eQ5_00_UUC-PMyp6lgICVBOM0Q/edit?usp=sharing</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105631910,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/17 lightning talks",
+            "submessages": [],
+            "timestamp": 1484068785,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/e4681bc5bff25e25068895223319c149ef4d898f?x=x&version=1",
+            "client": "desktop app Mac 0.5.2",
+            "content": "<p><a href=\"http://www.robinwe.is/explorations/cry.html\" target=\"_blank\" title=\"http://www.robinwe.is/explorations/cry.html\">http://www.robinwe.is/explorations/cry.html</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 105791743,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f622",
+                    "emoji_name": "cry",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "davidelu93@gmail.com",
+                        "full_name": "David E Lu (he) (W1'16)",
+                        "id": 100322
+                    },
+                    "user_id": 100322
+                },
+                {
+                    "emoji_code": "1f622",
+                    "emoji_name": "cry",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "choisinsauce@gmail.com",
+                        "full_name": "Grace Choi (she) (W2'17)",
+                        "id": 100457
+                    },
+                    "user_id": 100457
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "davidelu93@gmail.com",
+            "sender_full_name": "David E Lu (he) (W1'16)",
+            "sender_id": 100322,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "crying",
+            "submessages": [],
+            "timestamp": 1484372999,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Hi everyone! My cold feels like it's gotten worse so I'm going to chill at home and try to avoid getting everyone else at RC sick! Here's a table of a few neat data sets if you're interested in data to work with for today's meeting! Links to each dataset are in the 4th column <a href=\"https://gist.github.com/olivercameron/482dcfe8f34d66b536b1048eefe8b40d#file-datasets-csv\" target=\"_blank\" title=\"https://gist.github.com/olivercameron/482dcfe8f34d66b536b1048eefe8b40d#file-datasets-csv\">https://gist.github.com/olivercameron/482dcfe8f34d66b536b1048eefe8b40d#file-datasets-csv</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106223336,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f375",
+                    "emoji_name": "teacup_without_handle",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "choisinsauce@gmail.com",
+                        "full_name": "Grace Choi (she) (W2'17)",
+                        "id": 100457
+                    },
+                    "user_id": 100457
+                },
+                {
+                    "emoji_code": "1f35c",
+                    "emoji_name": "steaming_bowl",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "choisinsauce@gmail.com",
+                        "full_name": "Grace Choi (she) (W2'17)",
+                        "id": 100457
+                    },
+                    "user_id": 100457
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485267999,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/70201dad8f30b376c8e9f8ede010e43b63266850?x=x&version=6",
+            "client": "website",
+            "content": "<p>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106226841,
+            "is_me_message": false,
+            "last_edit_timestamp": 1605723625,
+            "reactions": [
+                {
+                    "emoji_code": "203c",
+                    "emoji_name": "bangbang",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "claire.durand@temple.edu",
+                        "full_name": "Claire Durand (W2'17)",
+                        "id": 100455
+                    },
+                    "user_id": 100455
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "stanley@zheng.nyc",
+            "sender_full_name": "Stanley Zheng (they) (W1'19)",
+            "sender_id": 100315,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485274203,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>UFOs labels: [\"date\",\"city\",\"state\",\"country\",\"shape\",\"seconds\",\"duration\",\"description\",\"date_added\",\"lat\",\"lon\"]</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106227005,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485274557,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Thanks, <span class=\"user-mention\" data-user-email=\"claire.durand@temple.edu\">@Claire Durand (W2'17)</span> , for the idea! We took the UFO data from that list and ran with it. Here's what <span class=\"user-mention\" data-user-email=\"chrisedgemon@gmail.com\">@Christopher Edgemon (W2'17)</span> and I came up with: <a href=\"http://bl.ocks.org/anbnyc/3c8bed8f8269fac9e291eaeead030444\" target=\"_blank\" title=\"http://bl.ocks.org/anbnyc/3c8bed8f8269fac9e291eaeead030444\">http://bl.ocks.org/anbnyc/3c8bed8f8269fac9e291eaeead030444</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106230632,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "chrisedgemon@gmail.com",
+                        "full_name": "Christopher Edgemon (he) (W2'17)",
+                        "id": 831
+                    },
+                    "user_id": 831
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485281032,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Very nice! The UFO data definitely seemed fun <img alt=\":grin:\" class=\"emoji\" src=\"/static/generated/emoji/images/emoji/grin.png\" title=\":grin:\"> </p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106230764,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485281168,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/70201dad8f30b376c8e9f8ede010e43b63266850?x=x&version=6",
+            "client": "website",
+            "content": "<p>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106231297,
+            "is_me_message": false,
+            "last_edit_timestamp": 1605723626,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "stanley@zheng.nyc",
+            "sender_full_name": "Stanley Zheng (they) (W1'19)",
+            "sender_id": 100315,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485282008,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/c4c258861139608c3bf0c54b67094d45?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Here's some of the analysis me and Stanley did(Just cleaned up what I could):<br>\n<a href=\"https://gist.github.com/gugzkumar/bbeca800815704528ce84f8f49db4d60\" target=\"_blank\" title=\"https://gist.github.com/gugzkumar/bbeca800815704528ce84f8f49db4d60\">https://gist.github.com/gugzkumar/bbeca800815704528ce84f8f49db4d60</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106235075,
+            "is_me_message": false,
+            "last_edit_timestamp": 1485288262,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gagantunuguntla@saimail.com",
+            "sender_full_name": "Gagan Kumar Tunuguntla (W2'17)",
+            "sender_id": 100462,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/24 meeting",
+            "submessages": [],
+            "timestamp": 1485288236,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Here's some cool dAtA aggregator I found that might be fun to work with today! <a href=\"https://github.com/caesar0301/awesome-public-datasets\" target=\"_blank\" title=\"https://github.com/caesar0301/awesome-public-datasets\">https://github.com/caesar0301/awesome-public-datasets</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106517002,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/31",
+            "submessages": [],
+            "timestamp": 1485878202,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Some French data <a href=\"http://www.ined.fr/Xtradocs/statistiques_ivg/2012/T1_2012.html#f01_1\" target=\"_blank\" title=\"http://www.ined.fr/Xtradocs/statistiques_ivg/2012/T1_2012.html#f01_1\">http://www.ined.fr/Xtradocs/statistiques_ivg/2012/T1_2012.html#f01_1</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106517764,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/31",
+            "submessages": [],
+            "timestamp": 1485879438,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/70201dad8f30b376c8e9f8ede010e43b63266850?x=x&version=6",
+            "client": "website",
+            "content": "<p>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106517840,
+            "is_me_message": false,
+            "last_edit_timestamp": 1605723681,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "stanley@zheng.nyc",
+            "sender_full_name": "Stanley Zheng (they) (W1'19)",
+            "sender_id": 100315,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/31",
+            "submessages": [],
+            "timestamp": 1485879556,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/c4c258861139608c3bf0c54b67094d45?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"http://www.johnstonsarchive.net/policy/abortion/ab-france.html\" target=\"_blank\" title=\"http://www.johnstonsarchive.net/policy/abortion/ab-france.html\">http://www.johnstonsarchive.net/policy/abortion/ab-france.html</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106517935,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gagantunuguntla@saimail.com",
+            "sender_full_name": "Gagan Kumar Tunuguntla (W2'17)",
+            "sender_id": 100462,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(no topic)",
+            "submessages": [],
+            "timestamp": 1485879705,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"/user_uploads/13/6EJKwsEAhVQKnteX9hbCknqN/ined_abortions.csv\" target=\"_blank\" title=\"ined_abortions.csv\">ined_abortions.csv</a> </p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106518318,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "stanley@zheng.nyc",
+                        "full_name": "Stanley Zheng (they) (W1'19)",
+                        "id": 100315
+                    },
+                    "user_id": 100315
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "01/31",
+            "submessages": [],
+            "timestamp": 1485880297,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/144877ed988449d7b6d0ff344f31279f?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><span class=\"user-mention\" data-user-id=\"100201\">@Deniz K\u00fcsefoglu (W2'17)</span>  pointed out this cool interactive visualization: <a href=\"https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html\" target=\"_blank\" title=\"https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html\">https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106520983,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "chrisedgemon@gmail.com",
+            "sender_full_name": "Christopher Edgemon (he) (W2'17)",
+            "sender_id": 831,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "you draw it!",
+            "submessages": [],
+            "timestamp": 1485884633,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Next week at Datavis can we try to figure out how this works?</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106521402,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "you draw it!",
+            "submessages": [],
+            "timestamp": 1485885443,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>I'd be super down!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106523211,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "you draw it!",
+            "submessages": [],
+            "timestamp": 1485888789,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/c4c258861139608c3bf0c54b67094d45?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>+1</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106523377,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gagantunuguntla@saimail.com",
+            "sender_full_name": "Gagan Kumar Tunuguntla (W2'17)",
+            "sender_id": 100462,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "you draw it!",
+            "submessages": [],
+            "timestamp": 1485889137,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/a572504d47e8d059fee72dd7bd5ea7de01d08ae8?x=x&version=2",
+            "client": "website",
+            "content": "<p>'Sup friends!  I was thinking for the next meeting of the club, we could do visualizations on the state of our inbox!  Basically I want to create something that shows how many unarchived emails I have over time for my inbox, but I bet there's lots of other cool things to visualize as well.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106620810,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gwenweston@gmail.com",
+            "sender_full_name": "Gwendolyn Weston (W2'17)",
+            "sender_id": 100453,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "email visualizations",
+            "submessages": [],
+            "timestamp": 1486064722,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/a572504d47e8d059fee72dd7bd5ea7de01d08ae8?x=x&version=2",
+            "client": "website",
+            "content": "<p>Also, because it'll be our own code, we don't have to feel suspicious about giving some third-party extension access to all our emails!  Yay privacyyy!!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106620838,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "gwenweston@gmail.com",
+            "sender_full_name": "Gwendolyn Weston (W2'17)",
+            "sender_id": 100453,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "email visualizations",
+            "submessages": [],
+            "timestamp": 1486064755,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p><a href=\"https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html\" target=\"_blank\" title=\"https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html\">https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106843543,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "nyt you draw it",
+            "submessages": [],
+            "timestamp": 1486485533,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/65522ace7bc03891996c35e075e69a20?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"https://github.com/cjroth/chronist/blob/master/analysis/comparative.ipynb\" target=\"_blank\" title=\"https://github.com/cjroth/chronist/blob/master/analysis/comparative.ipynb\">https://github.com/cjroth/chronist/blob/master/analysis/comparative.ipynb</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106843610,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "chris@cjroth.com",
+            "sender_full_name": "Chris Roth (W1'16)",
+            "sender_id": 100321,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "sentiment vis",
+            "submessages": [],
+            "timestamp": 1486485617,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>will present on this next week: <a href=\"https://bl.ocks.org/anbnyc/a83ec925d25871db80e45e04c4233736\" target=\"_blank\" title=\"https://bl.ocks.org/anbnyc/a83ec925d25871db80e45e04c4233736\">https://bl.ocks.org/anbnyc/a83ec925d25871db80e45e04c4233736</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 106855693,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "nyt you draw it",
+            "submessages": [],
+            "timestamp": 1486501039,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Our weekly meeting is at 11am tomorrow. I think Hopper is being used by the Intro to Zulip presentation so let's meet in Babbage. New Spring 1's -- please join us! (If you're reading this message, you're probably good on the Zulip front.)</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107119176,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "claire.durand@temple.edu",
+                        "full_name": "Claire Durand (W2'17)",
+                        "id": 100455
+                    },
+                    "user_id": 100455
+                },
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "stanley@zheng.nyc",
+                        "full_name": "Stanley Zheng (they) (W1'19)",
+                        "id": 100315
+                    },
+                    "user_id": 100315
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "02/14 meeting",
+            "submessages": [],
+            "timestamp": 1487043518,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>And here is the code! <a href=\"https://gist.github.com/anbnyc/a83ec925d25871db80e45e04c4233736\" target=\"_blank\" title=\"https://gist.github.com/anbnyc/a83ec925d25871db80e45e04c4233736\">https://gist.github.com/anbnyc/a83ec925d25871db80e45e04c4233736</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107139235,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "nyt you draw it",
+            "submessages": [],
+            "timestamp": 1487088483,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p><a href=\"https://recurse.zulipchat.com/#narrow/near/106517002/stream/data.20vis/topic/01.2F31\" target=\"_blank\" title=\"https://recurse.zulipchat.com/#narrow/near/106517002/stream/data.20vis/topic/01.2F31\">https://recurse.zulipchat.com/#narrow/near/106517002/stream/data.20vis/topic/01.2F31</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107139465,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "02/14 meeting",
+            "submessages": [],
+            "timestamp": 1487088930,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/c4c258861139608c3bf0c54b67094d45?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"https://github.com/caesar0301/awesome-public-datasets\" target=\"_blank\" title=\"https://github.com/caesar0301/awesome-public-datasets\">https://github.com/caesar0301/awesome-public-datasets</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107139469,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "stanley@zheng.nyc",
+                        "full_name": "Stanley Zheng (they) (W1'19)",
+                        "id": 100315
+                    },
+                    "user_id": 100315
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "gagantunuguntla@saimail.com",
+            "sender_full_name": "Gagan Kumar Tunuguntla (W2'17)",
+            "sender_id": 100462,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "datasets",
+            "submessages": [],
+            "timestamp": 1487088946,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/e6e77919840032b8fd930a06bcfdc3f9?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><span class=\"user-mention\" data-user-email=\"alecbarrett@gmail.com\" data-user-id=\"100451\">@Alec Barrett (W2'17)</span> <span class=\"user-mention\" data-user-email=\"gagantunuguntla@saimail.com\" data-user-id=\"100462\">@Gagan Kumar Tunuguntla (W2'17)</span>  <a href=\"https://snap.stanford.edu/data/\" target=\"_blank\" title=\"https://snap.stanford.edu/data/\">https://snap.stanford.edu/data/</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107140131,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "charlyetran@gmail.com",
+            "sender_full_name": "Charlye Delgado (SP1'17)",
+            "sender_id": 100547,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(no topic)",
+            "submessages": [],
+            "timestamp": 1487090172,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/37dbaa97657f4ad7165e5d2386093176?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Meeting in Babbage today since Web dev 101 is in Hopper!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107421132,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "stanley@zheng.nyc",
+                        "full_name": "Stanley Zheng (they) (W1'19)",
+                        "id": 100315
+                    },
+                    "user_id": 100315
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "claire.durand@temple.edu",
+            "sender_full_name": "Claire Durand (W2'17)",
+            "sender_id": 100455,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "02/21",
+            "submessages": [],
+            "timestamp": 1487693135,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/e6e77919840032b8fd930a06bcfdc3f9?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>can't make it today since i have to run to the ortho but i'll rejoin next week.  have fun!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107421188,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "charlyetran@gmail.com",
+            "sender_full_name": "Charlye Delgado (SP1'17)",
+            "sender_id": 100547,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "02/21",
+            "submessages": [],
+            "timestamp": 1487693200,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Happy Mardi Gras, everyone. We'll be meeting in Hopper at 11am! Feel free to bring visualization bugs (we have a couple d3js ones lined up). I'm also hoping to do a little exploring of 3D visualization.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107713962,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "2/28",
+            "submessages": [],
+            "timestamp": 1488294736,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Correction: Babbage</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 107715786,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "2/28",
+            "submessages": [],
+            "timestamp": 1488297671,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/919b4af386b43c5ca84d8e664790a7d906336c0d?x=x&version=1",
+            "client": "website",
+            "content": "<p>Has anybody used any of the command line tools from the graphviz library? like dot or neato? Do they take forever to run? I'm going to force quit dot as I need to leave, It's been maxing out one of my cores for about 40 mins. The input file is ~2MB of text so don't even know how big the output png/jpeg will be. <img alt=\":thinking_face:\" class=\"emoji\" src=\"/static/generated/emoji/images/emoji/unicode/1f914.png\" title=\":thinking_face:\"></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 108660634,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "botwhytho@gmail.com",
+            "sender_full_name": "Alberto Torres (SP1'17)",
+            "sender_id": 100545,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "Graphviz",
+            "submessages": [],
+            "timestamp": 1490220532,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p><a href=\"http://alignedleft.com/about\" target=\"_blank\" title=\"http://alignedleft.com/about\">Scott Murray</a>, a prominent data vis researcher/teacher/developer, set up a data vis community on Mastodon (a friendlier Twitter clone, as I just learned) at <a href=\"http://vis.social\" target=\"_blank\" title=\"http://vis.social\">vis.social</a>. Still TBD whether it will be a fruitful lively community full of networking and resources or Just Another Thing To Check.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 121835024,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "vis.social",
+            "submessages": [],
+            "timestamp": 1517413287,
+            "topic_links": [
+                "https://vis.social"
+            ],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/a39073ec6ea8070cbfb74f6d7da8c999?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Mike Bostock's new project just launched <a href=\"https://beta.observablehq.com/\" target=\"_blank\" title=\"https://beta.observablehq.com/\">https://beta.observablehq.com/</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 121838059,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f386",
+                    "emoji_name": "fireworks",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "kyleschiller@gmail.com",
+                        "full_name": "Kyle Ching Schiller (he) (m1'19)",
+                        "id": 8704
+                    },
+                    "user_id": 8704
+                },
+                {
+                    "emoji_code": "1f386",
+                    "emoji_name": "fireworks",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "genny.hoffman@gmail.com",
+                        "full_name": "Genevieve Hoffman (W1'17)",
+                        "id": 103122
+                    },
+                    "user_id": 103122
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "recurse@vijithassar.com",
+            "sender_full_name": "Vijith Assar (W2'18)",
+            "sender_id": 105042,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "Observable",
+            "submessages": [],
+            "timestamp": 1517418061,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/2c519a6780d234da6797a581ec6b569a25fa5cac?x=x&version=2",
+            "client": "website",
+            "content": "<p>Anyone have a favorite way to visualize/compare distributions? I've seen either side-by-side boxplots or violin plots often done. I'm thinking about just plotting the raw points of each distribution side-by-side (<a href=\"https://ops101.org/cop.html\" target=\"_blank\" title=\"https://ops101.org/cop.html\">https://ops101.org/cop.html</a>) instead</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 129142250,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "vsrinivas@ops101.org",
+            "sender_full_name": "Venkatesh Srinivas (he) (S2'18)",
+            "sender_id": 120560,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "favorite way to view/compare distributions?",
+            "submessages": [],
+            "timestamp": 1530801572,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/89ca9a012749d846c25306ce17aebb57?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>i think just plotting the two PDFs or two CDFs is often enough. the KS test (for example)  is a non parametric comparison of CDFs. if you want to use a \"smaller\" viz than the full histograms, boxplots / candle plots / violins are fine (for example, you want to plot more than 2 histograms, then candle plot might be more useful)</p>\n<p>two example resources i like are: <a href=\"https://www.itl.nist.gov/div898/handbook/eda/section3/eda33.htm\" target=\"_blank\" title=\"https://www.itl.nist.gov/div898/handbook/eda/section3/eda33.htm\">https://www.itl.nist.gov/div898/handbook/eda/section3/eda33.htm</a> (the nist statistics handbook) and <a href=\"http://datavizproject.com/\" target=\"_blank\" title=\"http://datavizproject.com/\">http://datavizproject.com/</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 129196263,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "okay.zed@gmail.com",
+            "sender_full_name": "okay zed (S1'18)",
+            "sender_id": 117513,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "favorite way to view/compare distributions?",
+            "submessages": [],
+            "timestamp": 1530877218,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p><span class=\"user-mention\" data-user-id=\"130218\">@Adam Tigar (F2'18)</span> <span class=\"user-mention\" data-user-id=\"134191\">@Rowan Copley (W1'18)</span> <span class=\"user-mention\" data-user-id=\"134400\">@Jackie Liu (W1'18)</span> <span class=\"user-mention\" data-user-id=\"134467\">@Michelle Ho (W1'18)</span> <br>\nWhat meeting time works for everyone? Thursday at 11:30 again?</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147533022,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542037408,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>Hi DataViz group currently here, at our last meeting I mentioned I was going on a roadtrip to Philly on Friday to attend this master class at UPenn in data viz and maps in R. <a href=\"https://www.eventbrite.com/e/2018-musa-master-class-featuring-james-cheshire-tickets-50411541277\" target=\"_blank\" title=\"https://www.eventbrite.com/e/2018-musa-master-class-featuring-james-cheshire-tickets-50411541277\">https://www.eventbrite.com/e/2018-musa-master-class-featuring-james-cheshire-tickets-50411541277</a>. It looks like the event has filled up, but you can attend the webcast!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147533705,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "upenn masterclass",
+            "submessages": [],
+            "timestamp": 1542038002,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/205f6d09582a777f36bf64862634dd28?d=identicon&version=1",
+            "client": "ZulipElectron",
+            "content": "<p>Heck yeah. Emily, do you want to do something about R?</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147534075,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "rowan.copley@gmail.com",
+            "sender_full_name": "Rowan Copley (he) (W1'18)",
+            "sender_id": 134191,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542038339,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/14fae98146419eab0d4e5e12ff7cf0eadbc3d36e?x=x&version=2",
+            "client": "ZulipMobile",
+            "content": "<p>That works!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147536680,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "jacklyn.liu@gmail.com",
+            "sender_full_name": "Jackie Liu (she) (W1'18)",
+            "sender_id": 134400,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542041145,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p>Reached out to some of my hiking friends and got this mother of all spreadsheets from the PCT (it has miles, steps, even laundry/showers):</p>\n<p><a href=\"https://docs.google.com/spreadsheets/d/1EzodjIsyHGY9hYJJkeWJUeLIAW3r2nLBs1QQjjIc_Iw/edit?usp=sharing\" target=\"_blank\" title=\"https://docs.google.com/spreadsheets/d/1EzodjIsyHGY9hYJJkeWJUeLIAW3r2nLBs1QQjjIc_Iw/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1EzodjIsyHGY9hYJJkeWJUeLIAW3r2nLBs1QQjjIc_Iw/edit?usp=sharing</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147641563,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542163080,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p>I'm hoping to have at least 2 more people's data, so we can brainstorm aggregate visualizations.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147641610,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542163126,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p>I know some people are doing <a href=\"http://fast.ai\" target=\"_blank\" title=\"http://fast.ai\">fast.ai</a> at 12, so I booked us for 10am. Is this too early? I'll open with a quick R tutorial, we can whiteboard a bit on what kinds of visualizations to do, and then start working through them.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147641632,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542163190,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p><span class=\"user-mention\" data-user-id=\"134389\">@Emily Ann Balczewski (W1'18)</span> ; sounds great!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147681059,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542212693,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>I'm dying to know what \"Cowboy\", \"Zero\" and \"Nero\" mean</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147681113,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542212759,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p><a href=\"/user_uploads/13/jRwJrwZkWrnb_O2eQR6vfy4G/Spirit.csv\" target=\"_blank\" title=\"Spirit.csv\">Spirit.csv</a> <a href=\"/user_uploads/13/-zExJAbSbLZ6nUIhPrYtkMya/Rick.csv\" target=\"_blank\" title=\"Rick.csv\">Rick.csv</a> <a href=\"/user_uploads/13/7-0HiVfvbcqGqBqwfb_Sk1Ev/RayNow.csv\" target=\"_blank\" title=\"RayNow.csv\">RayNow.csv</a> <a href=\"/user_uploads/13/s5INsMqmC9VN5nsjj-50gg6H/Jay.csv\" target=\"_blank\" title=\"Jay.csv\">Jay.csv</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147748016,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542294485,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/772419261815796fcbed195f9871885315f4b5c6?x=x&version=4",
+            "client": "website",
+            "content": "<p><a href=\"https://www.google.com/maps/d/u/0/edit?mid=1iJMZxt8vPjQqJoQP7aj6or0wq08VIJN5&amp;ll=35.9271344521971%2C-118.5329857928831&amp;z=5&amp;fbclid=IwAR3VKS5hTrXhR5P4v6xTvWxr6i5fhVhaEar3di078GMwe-64_sX5IueV-Ns\" target=\"_blank\" title=\"https://www.google.com/maps/d/u/0/edit?mid=1iJMZxt8vPjQqJoQP7aj6or0wq08VIJN5&amp;ll=35.9271344521971%2C-118.5329857928831&amp;z=5&amp;fbclid=IwAR3VKS5hTrXhR5P4v6xTvWxr6i5fhVhaEar3di078GMwe-64_sX5IueV-Ns\">https://www.google.com/maps/d/u/0/edit?mid=1iJMZxt8vPjQqJoQP7aj6or0wq08VIJN5&amp;ll=35.9271344521971%2C-118.5329857928831&amp;z=5&amp;fbclid=IwAR3VKS5hTrXhR5P4v6xTvWxr6i5fhVhaEar3di078GMwe-64_sX5IueV-Ns</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 147748899,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "ebalczewski@gmail.com",
+            "sender_full_name": "Emily Ann Balczewski (she) (W1'18)",
+            "sender_id": 134389,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "(W1)eekly Dose of Data Vis: Week 1",
+            "submessages": [],
+            "timestamp": 1542295138,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>Anyone want to pair with me on D3? I'm at a 4th floor pairing station! I'm trying to fill in some zeroes for missing data values <span class=\"emoji emoji-1f914\" title=\"thinking\">:thinking:</span></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 148663552,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 Pairing",
+            "submessages": [],
+            "timestamp": 1543348790,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>after about two hours; I have successfully added in zeroes for missing data years using incredibly hacky javascript and d3 <span class=\"emoji emoji-1f648\" title=\"see no evil\">:see_no_evil:</span> omg never again</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 148671096,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 Pairing",
+            "submessages": [],
+            "timestamp": 1543355884,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>Hello! My company organizes the <a href=\"https://www.meetup.com/NYC-D3-JS/\" target=\"_blank\" title=\"https://www.meetup.com/NYC-D3-JS/\">NYC D3 meetup</a> and we are looking for speakers for upcoming meetups. The next one will be at the New School on February 28th at 7pm, and we're also looking for speakers for March, April, and May (dates TBD and flexible). If you're interested please let me know or email my colleague Natalie <a href=\"mailto:natalie@two-n.com\" title=\"mailto:natalie@two-n.com\">natalie@two-n.com</a>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 155366214,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 meetup - speakers wanted",
+            "submessages": [],
+            "timestamp": 1547756819,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/27f18c8e071b5fb513029f36abf4d92d?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>went to the meetup to register to sign up for the event, has it been added to the upcoming events list?</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 155371361,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "benschac@gmail.com",
+            "sender_full_name": "Benjamin Schachter (he/they) (W1'16)",
+            "sender_id": 100320,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 meetup - speakers wanted",
+            "submessages": [],
+            "timestamp": 1547761044,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>No - you're getting insider info!!  It'll be posted once the speakers are lined up.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 156324879,
+            "is_me_message": false,
+            "last_edit_timestamp": 1547764047,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 meetup - speakers wanted",
+            "submessages": [],
+            "timestamp": 1547764032,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/51eb74b84b6765b1128907e8bfac5454c5e693dd?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>Ah! I would very much be interested in this but unfortunately I'm leaving NYC on February 18th!</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 156343184,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "michellemmh@gmail.com",
+            "sender_full_name": "Michelle Ho (she) (W1'18)",
+            "sender_id": 134467,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "D3 meetup - speakers wanted",
+            "submessages": [],
+            "timestamp": 1547785347,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/4334a59d02d66348593e46832ca73ae071f23b5e?x=x&version=7",
+            "client": "ZulipElectron",
+            "content": "<p>Thought this was a fantastic viz of how the english alphabet developed over time (it's also quite aesthetically appealing) <a href=\"https://usefulcharts.com/blogs/charts/evolution-of-the-english-alphabet\" target=\"_blank\" title=\"https://usefulcharts.com/blogs/charts/evolution-of-the-english-alphabet\">https://usefulcharts.com/blogs/charts/evolution-of-the-english-alphabet</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 157439226,
+            "is_me_message": false,
+            "last_edit_timestamp": 1549142916,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "victoria@unconventionaldata.ai",
+            "sender_full_name": "Victoria Levchenko (she) (W2'19)",
+            "sender_id": 198466,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "evolution of the alphabet",
+            "submessages": [],
+            "timestamp": 1549142841,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/4334a59d02d66348593e46832ca73ae071f23b5e?x=x&version=7",
+            "client": "ZulipElectron",
+            "content": "<p><a href=\"/user_uploads/13/xH1PgeflLrJMhN-UJ2SmoSIv/pasted_image.png\" target=\"_blank\" title=\"pasted_image.png\">pasted image</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/13/xH1PgeflLrJMhN-UJ2SmoSIv/pasted_image.png\" target=\"_blank\" title=\"pasted image\"><img src=\"/user_uploads/13/xH1PgeflLrJMhN-UJ2SmoSIv/pasted_image.png\"></a></div>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 157439283,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f62e",
+                    "emoji_name": "surprise",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "sruti.modekurty@gmail.com",
+                        "full_name": "Sruti Modekurty (she) (W2'19)",
+                        "id": 158871
+                    },
+                    "user_id": 158871
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "victoria@unconventionaldata.ai",
+            "sender_full_name": "Victoria Levchenko (she) (W2'19)",
+            "sender_id": 198466,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "evolution of the alphabet",
+            "submessages": [],
+            "timestamp": 1549142893,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/36716766e555f85a2c18cf8f358d6f63ccc077d9?x=x&version=2",
+            "client": "website",
+            "content": "<p>that's very cool! (although I'm still wondering how we ended up w/ C, K _and_ S <span aria-label=\"stuck out tongue\" class=\"emoji emoji-1f61d\" role=\"img\" title=\"stuck out tongue\">:stuck_out_tongue:</span></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 157655701,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "mattg@leema.org",
+            "sender_full_name": "Matthew Graham (he) (F1'18)",
+            "sender_id": 125276,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "evolution of the alphabet",
+            "submessages": [],
+            "timestamp": 1549415079,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/6c4c99c7b27cfdda7a1a0b996487147436a481d4?x=x&version=2",
+            "client": "website",
+            "content": "<p><a href=\"https://github.com/Lissy93/twitter-sentiment-visualisation\" target=\"_blank\" title=\"https://github.com/Lissy93/twitter-sentiment-visualisation\">https://github.com/Lissy93/twitter-sentiment-visualisation</a> this is so cool! <span class=\"user-mention\" data-user-id=\"198466\">@Victoria Levchenko (W2'19)</span> might be helpful for you</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 158546433,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "steve@stevegattuso.me",
+                        "full_name": "Steve Gattuso (he) (S1'19)",
+                        "id": 221911
+                    },
+                    "user_id": 221911
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "sruti.modekurty@gmail.com",
+            "sender_full_name": "Sruti Modekurty (she) (W2'19)",
+            "sender_id": 158871,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "twitter sentiment visualization",
+            "submessages": [],
+            "timestamp": 1550164687,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/7857f26c1ef2e9bdbfa843f9087710f7?d=identicon&version=1",
+            "client": "website",
+            "content": "<p><a href=\"https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html\" target=\"_blank\" title=\"https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html\">https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 173681975,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "nathan12343@gmail.com",
+            "sender_full_name": "Nathan Goldbaum (he) (S1'19)",
+            "sender_id": 221814,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "Perceptually linear rainbow colormap",
+            "submessages": [],
+            "timestamp": 1566325066,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/70201dad8f30b376c8e9f8ede010e43b63266850?x=x&version=6",
+            "client": "website",
+            "content": "<p>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 180786953,
+            "is_me_message": false,
+            "last_edit_timestamp": 1605721777,
+            "reactions": [
+                {
+                    "emoji_code": "1f30c",
+                    "emoji_name": "milky_way",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "mattg@leema.org",
+                        "full_name": "Matthew Graham (he) (F1'18)",
+                        "id": 125276
+                    },
+                    "user_id": 125276
+                },
+                {
+                    "emoji_code": "1f60d",
+                    "emoji_name": "heart_eyes",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "hh.durrant@gmail.com",
+                        "full_name": "Helen Durrant (she) (F2'19)",
+                        "id": 240575
+                    },
+                    "user_id": 240575
+                },
+                {
+                    "emoji_code": "1f30c",
+                    "emoji_name": "milky_way",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "pmmhy4@mst.edu",
+                        "full_name": "Patrick McCarver (they/he) (SP1'19)",
+                        "id": 134599
+                    },
+                    "user_id": 134599
+                },
+                {
+                    "emoji_code": "1f30e",
+                    "emoji_name": "earth_americas",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "pmmhy4@mst.edu",
+                        "full_name": "Patrick McCarver (they/he) (SP1'19)",
+                        "id": 134599
+                    },
+                    "user_id": 134599
+                },
+                {
+                    "emoji_code": "1f30e",
+                    "emoji_name": "earth_americas",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "alex_haak@hotmail.co.uk",
+                        "full_name": "Alex Haak (he) (F2'19)",
+                        "id": 241282
+                    },
+                    "user_id": 241282
+                },
+                {
+                    "emoji_code": "1f30c",
+                    "emoji_name": "milky_way",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "alex_haak@hotmail.co.uk",
+                        "full_name": "Alex Haak (he) (F2'19)",
+                        "id": 241282
+                    },
+                    "user_id": 241282
+                },
+                {
+                    "emoji_code": "1f30c",
+                    "emoji_name": "milky_way",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "marlenefdez@gmail.com",
+                        "full_name": "Marlene Fernandez (she) (SP1'18)",
+                        "id": 109654
+                    },
+                    "user_id": 109654
+                },
+                {
+                    "emoji_code": "1f30e",
+                    "emoji_name": "earth_americas",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "marlenefdez@gmail.com",
+                        "full_name": "Marlene Fernandez (she) (SP1'18)",
+                        "id": 109654
+                    },
+                    "user_id": 109654
+                },
+                {
+                    "emoji_code": "1f30c",
+                    "emoji_name": "milky_way",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "rowan.copley@gmail.com",
+                        "full_name": "Rowan Copley (he) (W1'18)",
+                        "id": 134191
+                    },
+                    "user_id": 134191
+                },
+                {
+                    "emoji_code": "1f30e",
+                    "emoji_name": "earth_americas",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "rowan.copley@gmail.com",
+                        "full_name": "Rowan Copley (he) (W1'18)",
+                        "id": 134191
+                    },
+                    "user_id": 134191
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "stanley@zheng.nyc",
+            "sender_full_name": "Stanley Zheng (they) (W1'19)",
+            "sender_id": 100315,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "Visualization Universe",
+            "submessages": [],
+            "timestamp": 1573773688,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/c6367e152fae3a77b79726730e83aa8021a77caa?x=x&version=3",
+            "client": "ZulipMobile",
+            "content": "<p><a href=\"https://youtu.be/vTingdk_pVM\">https://youtu.be/vTingdk_pVM</a></p>\n<p>Anyone familiar with this talk?</p>\n<p>The speaker created Altair. I saw this talk recommended for learning about data vis and tools in python. </p>\n<p>I haven't seen it yet but it's on my list.</p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"vTingdk_pVM\" href=\"https://youtu.be/vTingdk_pVM\"><img src=\"https://i.ytimg.com/vi/vTingdk_pVM/default.jpg\"></a></div>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 198405897,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 101791,
+            "sender_email": "wgrisaitis@gmail.com",
+            "sender_full_name": "William Grisaitis (he) (F1'19)",
+            "sender_id": 234883,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "PyCon 2019 - \"how to think about data visualization\" by J...",
+            "submessages": [],
+            "timestamp": 1590122830,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/096bee6351ba6927af83e84c635be5f5?d=identicon&version=1",
+            "client": "ZulipElectron",
+            "content": "<p>I have seen it. I love his(Speaker's) blog as well</p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 201283726,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "wgrisaitis@gmail.com",
+                        "full_name": "William Grisaitis (he) (F1'19)",
+                        "id": 234883
+                    },
+                    "user_id": 234883
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "unnati97@gmail.com",
+            "sender_full_name": "Unnati Niraj Patel (she) (S2'20)",
+            "sender_id": 277193,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "PyCon 2019 - \"how to think about data visualization\" by J...",
+            "submessages": [],
+            "timestamp": 1592493957,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/26fa664d693a3fa50e6b1431b777a8d27015fbdc?x=x&version=2",
+            "client": "website",
+            "content": "<p>IEEE Vis is remote this year and there are a few practitioner-oriented workshops with open requests for submissions, including VisActivities, VisGuides, VisComm, and VisFutures: see recent posts at <a href=\"https://twitter.com/ieeevis\">https://twitter.com/ieeevis</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "data vis",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 203717019,
+            "is_me_message": false,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "zach@zachkrall.com",
+                        "full_name": "Zach Krall (he) (S1'19)",
+                        "id": 221810
+                    },
+                    "user_id": 221810
+                }
+            ],
+            "recipient_id": 101791,
+            "sender_email": "alecbarrett@gmail.com",
+            "sender_full_name": "Alec Barrett (he) (W2'17)",
+            "sender_id": 100451,
+            "sender_realm_str": "recurse",
+            "stream_id": 100439,
+            "subject": "IEEE Vis",
+            "submessages": [],
+            "timestamp": 1594648339,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}

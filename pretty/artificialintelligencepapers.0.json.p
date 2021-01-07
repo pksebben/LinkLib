@@ -1,0 +1,202 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/1000/1cd87892343b6620726b112851f0b66cbda4a68f?x=x&version=4",
+            "client": "Internal",
+            "content": "<p>Welcome to <a class=\"stream\" data-stream-id=\"143505\" href=\"/#narrow/stream/143505-artificial-intelligence-papers\">#artificial intelligence papers</a>.</p>\n<p><strong>Description</strong>: A group created in F2 2018 to review AI-related papers of interest.</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 134629197,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "welcome-bot@zulip.com",
+            "sender_full_name": "Welcome Bot",
+            "sender_id": 100007,
+            "sender_realm_str": "zulipcore",
+            "stream_id": 143505,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1537910796,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/bdfa273b078eb15535445a76769338069877ab4a?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>Hey all!</p>\n<p>In the \"intro to machine learning\" meeting this afternoon, several of us expressed interest in starting a paper reading group for machine learning papers.</p>\n<p>I broadened the scope to artificial intelligence in general.</p>\n<p>I expect the papers we choose will be fairly technical, but no expertise is required! All are welcome. I hope the conversations will span many experience levels.</p>\n<p>I'll post a google doc shortly where we can add some papers -- feel free to post in the channel for now and I'll add them. Once enough people have joined, let's pick the first paper(s) and find a time to meet!</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 134629350,
+            "is_me_message": false,
+            "last_edit_timestamp": 1537911431,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "dylanjsherry@gmail.com",
+            "sender_full_name": "Dylan Sherry (he) (F2'18)",
+            "sender_id": 130335,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1537911018,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/30318530e091ab3b63df092e92acd1cf34fab5db?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>the fairness, accountability, and transparency in machine learning org (<a href=\"http://fatml.org\" target=\"_blank\" title=\"http://fatml.org\">fatml.org</a>) publishes some GREAT, capped-at-4-pgs research papers (thx again <span class=\"user-mention\" data-user-id=\"120700\">@ting zhang (S2'18)</span>  for pointing these out). i scraped them all a couple weeks ago and am happy to share! plz dm me if interested</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 134630923,
+            "is_me_message": false,
+            "last_edit_timestamp": 1537912976,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "dianecai@gmail.com",
+            "sender_full_name": "Diane Cai (she) (F1'18)",
+            "sender_id": 116512,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1537912948,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/bdfa273b078eb15535445a76769338069877ab4a?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>oooh thank you <span class=\"user-mention\" data-user-id=\"116512\">@Diane Cai (F1'18)</span> ! will do. i'm definitely interested in discussing ml (and ai) ethics</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 134631137,
+            "is_me_message": false,
+            "last_edit_timestamp": 1537913245,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "dylanjsherry@gmail.com",
+            "sender_full_name": "Dylan Sherry (he) (F2'18)",
+            "sender_id": 130335,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "hello",
+            "submessages": [],
+            "timestamp": 1537913237,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/bdfa273b078eb15535445a76769338069877ab4a?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>hey <span class=\"user-mention\" data-user-id=\"*\">@stream</span> i made a spreadsheet for collecting paper suggestions. feel free to suggest a different format for that if you have ideas. let's see how many we collectively end up adding tomorrow (weds) and then figure out what's next.</p>\n<p><a href=\"https://docs.google.com/spreadsheets/d/1ApAEcjEKsRHhcm0KuhphWEsaNGQS17D-YMl5ubDkXWY/edit?usp=sharing\" target=\"_blank\" title=\"https://docs.google.com/spreadsheets/d/1ApAEcjEKsRHhcm0KuhphWEsaNGQS17D-YMl5ubDkXWY/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1ApAEcjEKsRHhcm0KuhphWEsaNGQS17D-YMl5ubDkXWY/edit?usp=sharing</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 134633605,
+            "is_me_message": false,
+            "last_edit_timestamp": 1537916795,
+            "reactions": [
+                {
+                    "emoji_code": "1f44d",
+                    "emoji_name": "+1",
+                    "reaction_type": "unicode_emoji",
+                    "user": {
+                        "email": "jean@jeancochrane.com",
+                        "full_name": "Jean Cochrane (they) (F2'18)",
+                        "id": 130298
+                    },
+                    "user_id": 130298
+                }
+            ],
+            "recipient_id": 181651,
+            "sender_email": "dylanjsherry@gmail.com",
+            "sender_full_name": "Dylan Sherry (he) (F2'18)",
+            "sender_id": 130335,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "collecting paper suggestions",
+            "submessages": [],
+            "timestamp": 1537916760,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/bdfa273b078eb15535445a76769338069877ab4a?x=x&version=2",
+            "client": "ZulipElectron",
+            "content": "<p>for anyone following along, this stream was quickly subsumed by <a class=\"stream\" data-stream-id=\"124495\" href=\"/#narrow/stream/124495-machine-learning-study-group\">#machine learning study group</a> a while back. i plan to delete it next week before my batch ends</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 151142382,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "dylanjsherry@gmail.com",
+            "sender_full_name": "Dylan Sherry (he) (F2'18)",
+            "sender_id": 130335,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "deprecated stream",
+            "submessages": [],
+            "timestamp": 1544216974,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/c6367e152fae3a77b79726730e83aa8021a77caa?x=x&version=3",
+            "client": "ZulipMobile",
+            "content": "<p>Bump - wanna delete the stream?</p>",
+            "content_type": "text/html",
+            "display_recipient": "artificial intelligence papers",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 174247405,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 181651,
+            "sender_email": "wgrisaitis@gmail.com",
+            "sender_full_name": "William Grisaitis (he) (F1'19)",
+            "sender_id": 234883,
+            "sender_realm_str": "recurse",
+            "stream_id": 143505,
+            "subject": "deprecated stream",
+            "submessages": [],
+            "timestamp": 1566924395,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}

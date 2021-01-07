@@ -11,31 +11,38 @@ from flask_humanize import Humanize
 from flask import json
 from flask_login import LoginManager
 
-from views import index, link, register
+from views import index, link, register, api, testpage
 from views import login as login_view
 import db, container, models
 
-ENDPOINT = "tcp:8080"
-DEBUG = True
-
-login = LoginManager()
-login.login_view = "login_view.login"
-
-@login.user_loader
-def load_user(id):
-    return db.sqla.session.query(models.User).get(int(id))
 
 app = flask.Flask(__name__, static_folder='static')
-app.jinja_loader = PackageLoader(__name__, 'templates')
-
-app.secret_key = 'thereoncewasamanfromnantucketwhosethingwassolonghecouldbucket'
-login.init_app(app)
 
 
 def main():
+    """perform a grabbag of necessary initialization and run the app"""
+    ENDPOINT = "tcp:8080"
+    DEBUG = True
+
+
+    app.jinja_loader = PackageLoader(__name__, 'templates')
+
+
+    login = LoginManager()
+    login.login_view = "login_view.login"
+    
+    @login.user_loader
+    def load_user(id):
+        return db.sqla.session.query(models.User).get(int(id))
+
+    app.secret_key = 'thereoncewasamanfromnantucketwhosethingwassolonghecouldbucket'
+    login.init_app(app)
+
     container.run(app, ENDPOINT, DEBUG)
 
+
 def init(blueprints):
+    '''initialize blueprints and jinja environment'''
     for bp in blueprints:
         app.register_blueprint(bp.bp)
     humanize = Humanize(app)
@@ -44,8 +51,7 @@ def init(blueprints):
     return app
 
 
-if __name__ == "__main__":
-    db.init(app)
+def init_logging():
     logging.basicConfig(
         format="%(message)s", stream=sys.stdout, level=logging.INFO
     )
@@ -60,5 +66,9 @@ if __name__ == "__main__":
         cache_logger_on_first_use=True
     )
 
-    init([index, link, login_view, register])
+
+if __name__ == "__main__":
+    db.init(app)
+    init_logging()
+    init([index, link, login_view, register, api, testpage])
     main()

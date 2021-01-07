@@ -1,0 +1,111 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/00e64691f30328787e84b912b5cb6581?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>you can do some pretty cool stuff when searching.  I generally like to add things like \"stars:&gt;5\" and then sort by Recently Updated so that I can see projects with some interest and ones that were recently contributed to.</p>",
+            "content_type": "text/html",
+            "display_recipient": "tips and tricks",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 35195536,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 39404,
+            "sender_email": "robmalko@gmail.com",
+            "sender_full_name": "Robert Malko (SP1'15)",
+            "sender_id": 7648,
+            "sender_realm_str": "recurse",
+            "stream_id": 26804,
+            "subject": "github tips",
+            "submessages": [],
+            "timestamp": 1424109169,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/00e64691f30328787e84b912b5cb6581?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>here's a great post: <a href=\"https://help.github.com/articles/search-syntax/\" target=\"_blank\" title=\"https://help.github.com/articles/search-syntax/\">https://help.github.com/articles/search-syntax/</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "tips and tricks",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 35195543,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 39404,
+            "sender_email": "robmalko@gmail.com",
+            "sender_full_name": "Robert Malko (SP1'15)",
+            "sender_id": 7648,
+            "sender_realm_str": "recurse",
+            "stream_id": 26804,
+            "subject": "github tips",
+            "submessages": [],
+            "timestamp": 1424109209,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/4a226624af016ea38f3bb675e0d80334f4a300dc?x=x&version=1",
+            "client": "website",
+            "content": "<p>TIL: <a href=\"https://en.wikipedia.org/wiki/Drop_%28liquid%29\" target=\"_blank\" title=\"https://en.wikipedia.org/wiki/Drop_%28liquid%29\">Raindrops don't look anything like teardrops.</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "tips and tricks",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 53501750,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 39404,
+            "sender_email": "drewgarrido@gmail.com",
+            "sender_full_name": "Andrew Luis Garrido (W2'16)",
+            "sender_id": 8987,
+            "sender_realm_str": "recurse",
+            "stream_id": 26804,
+            "subject": "Raindrop",
+            "submessages": [],
+            "timestamp": 1455735601,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://secure.gravatar.com/avatar/f050b80594d5d59676e0620842eb0316?d=identicon&version=1",
+            "client": "website",
+            "content": "<p>Hey all!</p>\n<p>I've always enjoyed reading a ton of web articles, but never really enjoyed reading in the browser. <br>\nWanted a way to collect random sets of articles into an ebook that I could read on my Kindle/Phone/etc. </p>\n<p>Nothing really existed, so I created it! </p>\n<p><a href=\"https://epub.press\" target=\"_blank\" title=\"https://epub.press\">https://epub.press</a></p>\n<p>It's a browser extension that let's you build ebooks from collections of websites. </p>\n<p>Eg. I wanted to study this haskell course: <a href=\"http://www.seas.upenn.edu/~cis194/spring13/lectures.html\" target=\"_blank\" title=\"http://www.seas.upenn.edu/~cis194/spring13/lectures.html\">http://www.seas.upenn.edu/~cis194/spring13/lectures.html</a><br>\nSo I opened all the lectures in separate tabs and turned the whole course into an ebook.</p>\n<p>Thought it might be handy for aggregating your study resources while at RC. </p>\n<p>Enjoy :)</p>",
+            "content_type": "text/html",
+            "display_recipient": "tips and tricks",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 101588516,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 39404,
+            "sender_email": "haroldtreen@gmail.com",
+            "sender_full_name": "Harold Willis Treen (F2'16)",
+            "sender_id": 100193,
+            "sender_realm_str": "recurse",
+            "stream_id": 26804,
+            "subject": "Web Articles Offline",
+            "submessages": [],
+            "timestamp": 1475007046,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}

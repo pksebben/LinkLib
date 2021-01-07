@@ -30,14 +30,10 @@ from flask_login import UserMixin
 
 Base = declarative_base(cls=(JsonSerializableBase,))
 
-"""
-TODO: fix tag encoding to reflect number-linked sets (i.e. beginner-friendly: 21, python: 2 etc)
-tags are encoded as a comma seperated list.
-"""
-
 class LinkSchema(Schema):
     id = fields.Int()
     url = fields.Str()
+    domain = fields.Str()
     stream_id = fields.Int()
     message_id = fields.Int()
     relevance_score = fields.Int()
@@ -50,6 +46,7 @@ class Link(Base):
     
     id = Column(Integer, primary_key=True)
     url = Column(String(80))
+    domain = Column(String(80))
     stream_id = Column(Integer)
     message_id = Column(Integer)
     relevance_score = Column(Integer)
@@ -100,9 +97,3 @@ class User(UserMixin, Base):
     def check_password(self,password):
         return check_password_hash(self.password_hash,password)
     
-# class UserData(Base):
-
-#     __tablename__ = "userdata"
-    
-#     user_id = Column(Integer, ForeignKey(user.id))
-#     comment_history = Column(Integer, ForeignKey(comments.id))

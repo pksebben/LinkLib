@@ -1,0 +1,111 @@
+{
+    "anchor": 0,
+    "found_anchor": false,
+    "found_newest": true,
+    "found_oldest": true,
+    "history_limited": false,
+    "messages": [
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/1000/9fd9de59f964f6e3af477006ddd0116211347010?x=x&version=2",
+            "client": "Internal",
+            "content": "<p>Stream created by <span class=\"user-mention silent\" data-user-id=\"8478\">jake . (they) (W1'17)</span>.</p>",
+            "content_type": "text/html",
+            "display_recipient": "subconsciousness",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 211683459,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 555878,
+            "sender_email": "notification-bot@zulip.com",
+            "sender_full_name": "Notification Bot",
+            "sender_id": 100006,
+            "sender_realm_str": "zulipcore",
+            "stream_id": 259307,
+            "subject": "stream events",
+            "submessages": [],
+            "timestamp": 1601413235,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/3f6bef626649c46b4cc3fd9f67c151a19170da5e?x=x&version=21",
+            "client": "website",
+            "content": "<p><a href=\"https://t.me/joinchat/I3AZUxY7KmB_OvM6c7PaRg\">https://t.me/joinchat/I3AZUxY7KmB_OvM6c7PaRg</a></p>",
+            "content_type": "text/html",
+            "display_recipient": "subconsciousness",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 211684147,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 555878,
+            "sender_email": "jkozak@fmail.co.uk",
+            "sender_full_name": "Jake \u26e4 Prozvyshe (they) (W1'17)",
+            "sender_id": 8478,
+            "sender_realm_str": "recurse",
+            "stream_id": 259307,
+            "subject": "Welcome, friends",
+            "submessages": [],
+            "timestamp": 1601413559,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/3f6bef626649c46b4cc3fd9f67c151a19170da5e?x=x&version=21",
+            "client": "website",
+            "content": "<p>From the RC Code of Conduct:</p>\n<blockquote>\n<p>While RC is a professional community, it's also a community of friends. We ask you to be aware of the fact that conversations that may be appropriate within the context of a specific friendship or relationship with another Recurser may be inappropriate in the RC space or in a group conversation with Recursers you don't know well.</p>\n</blockquote>",
+            "content_type": "text/html",
+            "display_recipient": "subconsciousness",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 211684317,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 555878,
+            "sender_email": "jkozak@fmail.co.uk",
+            "sender_full_name": "Jake \u26e4 Prozvyshe (they) (W1'17)",
+            "sender_id": 8478,
+            "sender_realm_str": "recurse",
+            "stream_id": 259307,
+            "subject": "Welcome, friends",
+            "submessages": [],
+            "timestamp": 1601413634,
+            "topic_links": [],
+            "type": "stream"
+        },
+        {
+            "avatar_url": "https://zulip-avatars.s3.amazonaws.com/13/3f6bef626649c46b4cc3fd9f67c151a19170da5e?x=x&version=21",
+            "client": "website",
+            "content": "<p>All are welcome.</p>",
+            "content_type": "text/html",
+            "display_recipient": "subconsciousness",
+            "flags": [
+                "read",
+                "historical"
+            ],
+            "id": 211684356,
+            "is_me_message": false,
+            "reactions": [],
+            "recipient_id": 555878,
+            "sender_email": "jkozak@fmail.co.uk",
+            "sender_full_name": "Jake \u26e4 Prozvyshe (they) (W1'17)",
+            "sender_id": 8478,
+            "sender_realm_str": "recurse",
+            "stream_id": 259307,
+            "subject": "Welcome, friends",
+            "submessages": [],
+            "timestamp": 1601413657,
+            "topic_links": [],
+            "type": "stream"
+        }
+    ],
+    "msg": "",
+    "result": "success"
+}
