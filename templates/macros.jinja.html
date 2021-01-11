@@ -6,3 +6,12 @@
 </div>
 {% endmacro%}
 
+{% macro comment_input(parent_id=0) %}
+<div>
+    <form action ="/api/post" method="post" class="comment-form">
+	<input type="hidden" value={{ parent_id }} id="parent_id" />
+	<input id="content" type="textarea">
+	<input type="submit">
+    </form>
+</div>
+{% endmacro %}

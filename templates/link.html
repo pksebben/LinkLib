@@ -1,37 +1,43 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-    <head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    </head>
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+{% endblock %}
 
-    <body>
-	<div class="link-view">
-	    <div class="link-view-body">
-		<h3>{{ link.url }}</h3>
-		<a href="recurse.zulipchat.com/#narrow/stream/{{ link.stream_id }}">{{ link.stream_name }}</a>
-		<a href="recurse.zulipchat.com/#narrow/id/{{ link.message_id }}">context</a>
-		<p class="link-view-description">{{ link.description }}</p>
-		<ul class="link-view-tags">
-		    {% for tag in tags %}
-		    <li class="link-view-tag-item">[ {{ tag.count }} ]:{{ tag.name }}</li>
-		    {% endfor %}
-		</ul>
+{% block content %}
+<div class="link-view">
+    <div class="link-view-body">
+	<h3>{{ link.url }}</h3>
+	<a href="recurse.zulipchat.com/#narrow/stream/{{ link.stream_id }}">{{ link.stream_name }}</a>
+	<a href="http://recurse.zulipchat.com/#narrow/id/{{ link.message_id }}">context</a>
+	<p class="link-view-description">{{ link.description }}</p>
+	<ul class="link-view-tags">
+	    {% for tag in tags %}
+	    <li class="link-view-tag-item">[ {{ tag.count }} ]:{{ tag.name }}</li>
+	    {% endfor %}
+	</ul>
+	
+    </div>
+    <div class="link-view-comments">
 
+	{{ macro.comment_input() }}
+
+
+	{% for comment in comments%}
+	
+	{% endfor %}
+	<div class="comment">
+	    <div class="comment-header">
+		<p class="comment-timestamp">{{ comment.timestamp }}</p>
+		<p class="comment-user">{{ comment.user }}</p>
 	    </div>
-	    <div class="link-view-comments">
-		<div class="comment">
-		    <div class="comment-header">
-			<p class="comment-timestamp">{{ comment.timestamp }}</p>
-			<p class="comment-user">{{ comment.user }}</p>
-		    </div>
-		    <p class="comment-body">{{ comment.body }}</p>
-		    <div class="comment-reply-section">
-			<!-- this section should replace itself on click with a textarea to add a reply -->
-			<button class="comment-reply-button" id="comment-reply">reply</button>
-		    </div>
-		</div>
+	    <p class="comment-body">{{ comment.body }}</p>
+	    <div class="comment-reply-section">
+		<!-- this section should replace itself on click with a textarea to add a reply -->
+		<button class="comment-reply-button" id="comment-reply">reply</button>
 	    </div>
 	</div>
-    </body>
-</html>
+	
+    </div>
+</div>
+{% endblock %}

@@ -34,7 +34,10 @@ def post_comment():
     timestamp = datetime.datetime.now()
     user_id = current_user.id
     content = request.form['content']
-    parent_id = request.form['parent_id']
+    if request.form['parent_id'] != 0:
+        parent_id = request.form['parent_id']
+    else:
+        parent_id = None
     db.sqla.session.add(models.Comment(
         timestamp = timestamp,
         user_id = user_id,
@@ -42,6 +45,7 @@ def post_comment():
         parent_id = parent_id
     ))
     db.sqla.session.commit()
+    return flask.redirect('')
     
 @bp.route('/load', methods=['POST'])
 @login_required
