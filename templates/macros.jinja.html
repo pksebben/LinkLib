@@ -1,4 +1,4 @@
-{% macro comment(content, author, timestamp)%}
+{% macro old_comment(content, author, timestamp) %}
 <div>
     <p>{{ content }}</p>
     <p>{{ author }}</p>
@@ -14,4 +14,67 @@
 	<input type="submit">
     </form>
 </div>
+{% endmacro %}
+
+
+{% macro comment(content,author,timestamp,id,children) %}
+<div class="comment" id="comment-{{ id }}">
+    <div class="comment-body">
+	<div class="comment-header">
+	    <div class="comment-at-box">
+		<p class="comment-timestamp headtext">{{ timestamp }}</p>
+		<p class="comment-author headtext">{{ author }}</p>
+	    </div>
+	    <p class="comment-id headtext">{{ id }}</p>
+	</div>
+	<p class="comment-content">{{ content }}</p>
+    </div>
+    
+    <div class="comment-reply-area" id=commentID>
+	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+	
+	<form class="comment-form" action="/api/comment/submit" method="post">
+	    <input type="hidden" value="{{ id }}" id="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content"></textarea>
+	    <!-- <input class="comment-form-textarea" type="textarea" wrap="hard"> -->
+	    <input class="comment-form-submit" type="submit" value="post comment">
+	</form>
+    </div>
+    <div class="comment-child-area">
+	{% if children %}
+	{% for child_comment in children %}
+	{{ comment(child_comment.content, child_comment.author, child_comment.timestamp, child_comment.id, child_comment.children) }}
+	{% endfor %}
+	{% endif %}
+    </div>
+</div>
+<script>
+ function showReplySection(showbutton) {
+     var children = showbutton.parentElement.children;
+     
+     for (var i=0; i < children.length; i++) {
+	 
+	 if (children[i].className == "comment-form") {
+	     el = children[i];
+	     if (el.style.display == "block") {
+		 el.style.display = "none";
+	     } else {
+		 el.style.display = "block";
+	     }
+	 }
+     }
+ }
+</script>
+
+{% endmacro %}
+
+
+
+{% macro add_comment(parent_id=None) %}
+<form class="comment-form" action="/api/comment/submit" method="post">
+    <!-- Note: when accepting this form data, you must provide username in flask -->
+    <input type="hidden" value="{{ parent_id }}" name="parent_id">
+    <textarea class="comment-form-textarea" wrap="hard" name="content"></textarea>
+    <input class="comment-form-submit" type="submit" value="post comment">
+</form>
 {% endmacro %}

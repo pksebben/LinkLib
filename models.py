@@ -71,6 +71,7 @@ class Comment(Base):
     user_id = Column(Integer)
     content = Column(String)
     parent_id = Column(Integer, ForeignKey("comment.id"), index=True)
+    children = relationship('Comment', backref="parent", lazy='joined')
 
     parent = relationship(lambda: Comment, remote_side=id, backref="children")
 

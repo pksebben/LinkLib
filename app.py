@@ -15,16 +15,15 @@ from views import index, link, register, api, testpage
 from views import login as login_view
 import db, container, models
 
-
 app = flask.Flask(__name__, static_folder='static')
 
 
 def main():
     """perform a grabbag of necessary initialization and run the app"""
-    ENDPOINT = "tcp:8080"
+    ENDPOINT = "tcp:8081"
     DEBUG = True
-
-
+    
+    
     app.jinja_loader = PackageLoader(__name__, 'templates')
 
 
@@ -35,7 +34,7 @@ def main():
     def load_user(id):
         return db.sqla.session.query(models.User).get(int(id))
 
-    app.secret_key = 'thereoncewasamanfromnantucketwhosethingwassolonghecouldbucket'
+    app.secret_key = 'mbvc5s4r67uyd4fhgyvdst78g9hobigrn3jefb2iy8w79ui3v'
     login.init_app(app)
 
     container.run(app, ENDPOINT, DEBUG)

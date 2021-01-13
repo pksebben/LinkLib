@@ -18,5 +18,6 @@ bp = flask.Blueprint('index', __name__, template_folder="templates")
 @login_required
 def index():
     print("this is stdout")
+    root_rfc_comment = db.sqla.session.query(models.Comment).get(4)
     streams = json.load(open("streams.json"))
-    return render_template("index.html", streams=streams["streams"])
+    return render_template("index.html", streams=streams["streams"],root_rfc_comment=root_rfc_comment)

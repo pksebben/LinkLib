@@ -22,30 +22,46 @@ posts = 500  # num posts to generate
 quantity = 20  # num posts to return per request
 schema = models.LinkSchema(many=True)
 
-@bp.route('/api/post', methods=['POST'])
+@bp.route('/api/comment/submit', methods=['POST'])
 @login_required
 def post_comment():
-    '''
-    Post a comment to the db.
-    Form looks like:
-    TextArea name = 'content'
-    Input type='hidden' name='parent_id'
-    '''
-    timestamp = datetime.datetime.now()
-    user_id = current_user.id
-    content = request.form['content']
-    if request.form['parent_id'] != 0:
-        parent_id = request.form['parent_id']
-    else:
-        parent_id = None
+    content = request.form.get('content')
+    parent_id = request.form.get('parent_id')
+    userid = current_user.id
     db.sqla.session.add(models.Comment(
-        timestamp = timestamp,
-        user_id = user_id,
-        content = content,
-        parent_id = parent_id
+        timestamp = datetime.datetime.now(),
+        user_id = userid,
+        parent_id = parent_id,
+        content = content
     ))
     db.sqla.session.commit()
-    return flask.redirect('')
+    return flask.redirect("/")
+
+
+# @bp.route('/api/post', methods=['POST'])
+# @login_required
+# def post_comment():
+#     '''
+#     Post a comment to the db.
+#     Form looks like:
+#     TextArea name = 'content'
+#     Input type='hidden' name='parent_id'
+#     '''
+#     timestamp = datetime.datetime.now()
+#     user_id = current_user.id
+#     content = request.form['content']
+#     if request.form['parent_id'] != 0:
+#         parent_id = request.form['parent_id']
+#     else:
+#         parent_id = None
+#     db.sqla.session.add(models.Comment(
+#         timestamp = timestamp,
+#         user_id = user_id,
+#         content = content,
+#         parent_id = parent_id
+#     ))
+#     db.sqla.session.commit()
+#     return flask.redirect('')
     
 @bp.route('/load', methods=['POST'])
 @login_required
