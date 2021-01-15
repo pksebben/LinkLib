@@ -24,18 +24,13 @@ bp = flask.Blueprint('index', __name__, template_folder="templates")
 def index():
     print("this is stdout")
     root_rfc_comment = db.sqla.session.query(models.Comment).get(4)
+    root_comments = db.sqla.session.query(models.Comment).filter(models.Comment.parent_id == None).all()
+    print(root_comments)
 
 
     # TESTING
     child_comments = db.sqla.session.query(models.Comment).filter(models.Comment.parent_id == 4).all()
-    print("PRINTING CHILD COMMENTS")
-    for i in child_comments:
-        print("CHILD COMMENTS::", i)
-    print(dir(root_rfc_comment.children))
-    print("PRINTING CHILDREN")
-    for i in root_rfc_comment.children:
-        print("CHILD::", i)
 
     # //TESTING
     streams = json.load(open("streams.json"))
-    return render_template("index.html", streams=streams["streams"],root_rfc_comment=root_rfc_comment)
+    return render_template("index.html", streams=streams["streams"],root_rfc_comment=root_rfc_comment, rfc_comments=root_comments)

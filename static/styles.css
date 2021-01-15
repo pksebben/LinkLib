@@ -172,12 +172,13 @@ body {
      margin: 0;
      padding: 0;
      border: solid 1px var(--text-1-p);
-     font: .7em "Fira Code Retina", sans-serif;
+     font: .7em "Fira Code Retina", sans-serif !important;
  }
  .downvote {
       margin: 0;
      padding: 0;
-     border: solid 1px var(--text-1-p);    font: .7em "Fira Code Retina", sans-serif;
+     border: solid 1px var(--text-1-p);
+     font: .7em "Fira Code Retina", sans-serif;
  }
 
 /* End Comments */

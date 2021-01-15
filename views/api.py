@@ -50,40 +50,14 @@ def post_comment():
         parent_id = parent_id,
         content = content
     )
-
-    models.Comment.get(parent_id)
-    # parent = db.sqla.session.query(models.Comment).get(parent_id)
-    parent.children.append(comment)
-    # db.sqla.session.add(comment)
+    parent = db.sqla.session.query(models.Comment).get(parent_id)
+    if parent:    
+        parent.children.append(comment)
+    db.sqla.session.add(comment)
     db.sqla.session.commit()
     return flask.redirect("/")
 
 
-# @bp.route('/api/post', methods=['POST'])
-# @login_required
-# def post_comment():
-#     '''
-#     Post a comment to the db.
-#     Form looks like:
-#     TextArea name = 'content'
-#     Input type='hidden' name='parent_id'
-#     '''
-#     timestamp = datetime.datetime.now()
-#     user_id = current_user.id
-#     content = request.form['content']
-#     if request.form['parent_id'] != 0:
-#         parent_id = request.form['parent_id']
-#     else:
-#         parent_id = None
-#     db.sqla.session.add(models.Comment(
-#         timestamp = timestamp,
-#         user_id = user_id,
-#         content = content,
-#         parent_id = parent_id
-#     ))
-#     db.sqla.session.commit()
-#     return flask.redirect('')
-    
 @bp.route('/load', methods=['POST'])
 @login_required
 def load_comments():

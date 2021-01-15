@@ -70,18 +70,15 @@
 		    <p class="rfc-header-greeting">I know, I know, it's not pretty.  I didn't want to waste valuable time dolling it up at the cost of not having it available for you guys to look at, because I want the development of this platform to be as democratic as possible.  I extend the heartiest of invitations to comment, critique, make suggestions, anything.  There are no bad ideas.  My intent is that we collectively use this site as a vehilcle to help future batches (and, if we do it right, benefit from easy access to their contributions) and a way for all recursers; past, present, and future, to share the juiciest and most fascinating things they come across.  The links are just here to start the conversation - what would <bold>you</bold> like to tell the world?</p>
 		    <div class="rfc-buffer">
 			 <div class="comment-input">
-			     <!-- <form action="/api/post" method="post" class="comment-form">
-				  <textarea id="content" name="content"></textarea>
-				  <input type="hidden" name="parent_id" value="1">
-				  <input type="submit" value="submit">
-				  </form> -->
-			     <!-- {{ macro.add_comment() }} -->
+			      {{ macro.add_comment() }}
 			</div>
 			<div class="comment-area">
-			    {{ macro.comment(root_rfc_comment.content, root_rfc_comment.author, root_rfc_comment.timestamp, root_rfc_comment.id, root_rfc_comment.children) }}
+			    {% if root_rfc_comment is not none %}
+			    {{ macro.comment(root_rfc_comment.content, root_rfc_comment.author.name, root_rfc_comment.timestamp, root_rfc_comment.id, root_rfc_comment.children) }}
 			    {% for comment in rfc_comments %}
 			    {{ macro.comment(comment.content, comment.author, comment.timestamp, comment.id, comment.children) }}
 			    {% endfor %}
+			    {% endif %}
 			</div>
 		    </div>
 		    <!-- <div class="d-flex justify-content-center mb-3" id="sentinel"> -->

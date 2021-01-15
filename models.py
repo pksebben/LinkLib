@@ -50,6 +50,8 @@ class Link(Base):
     __tablename__ = "link"
     
     id = Column(Integer, primary_key=True)
+
+    # generated data
     url = Column(String(80))
     domain = Column(String(80))
     stream_id = Column(Integer)
@@ -59,6 +61,9 @@ class Link(Base):
     tags = relationship("Tag",
                         secondary=link_to_tag,
                         backref="links") 
+
+    # user-defined data
+    desc = Column(Text)
 
 
 class TagSchema(Schema):
@@ -87,11 +92,18 @@ class Comment(Base):
 
     id = Column(Integer, primary_key = True)
     timestamp = Column(Integer)
-    user_id = Column(Integer)
-    content = Column(String)
+    content = Column(Text)
+
+    # Interaction flags
+    score = Column(Integer, default=0, nullable=False)
+
+    # User relationship
+    user_id = Column(Integer, ForeignKey("user.id"))
+    author = relationship("User", back_populates="comments")
+
+    # Tree behavior - subcomments and subcomments of subcomments
     parent_id = Column(Integer, ForeignKey("comment.id"), index=True)
     children = relationship('Comment', back_populates="parent", lazy='joined')
-
     parent = relationship("Comment", remote_side=id, back_populates="children", lazy='joined')
 
 
@@ -110,6 +122,7 @@ class User(UserMixin, Base):
     name = Column(String)
     email = Column(String, nullable = False, unique=True)
     password_hash = Column(String())
+    comments = relationship("Comment", back_populates="author")
 
     def set_password(self,password):
         self.password_hash = generate_password_hash(password)

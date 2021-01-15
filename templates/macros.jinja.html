@@ -17,7 +17,7 @@
 {% endmacro %}
 
 
-{% macro comment(content,author,timestamp,id,children) %}
+{% macro comment(content,author,timestamp,id,children=None) %}
 <div class="comment" id="comment-{{ id }}">
     <div class="comment-body">
 	<div class="comment-header">
@@ -33,19 +33,17 @@
 	<p class="comment-content">{{ content }}</p>
     </div>
 
-	<!-- Comment Actions -->
+    <!-- Comment Actions -->
     <div class="comment-action-box">
 	<button class="comment-action-hide">hide</button>
 	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
     </div>
     
-    <div class="comment-reply-area">
-	
-	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+    <!-- Comment Reply Area -->
+    <div class="comment-reply-area">	
 	<form class="comment-form" action="/api/comment/submit" method="post">
 	    <input type="hidden" value="{{ id }}" id="parent_id" name="parent_id">
 	    <textarea class="comment-form-textarea" wrap="hard" id="content" name="content"></textarea>
-	    <!-- <input class="comment-form-textarea" type="textarea" wrap="hard"> -->
 	    <input class="comment-form-submit" type="submit" value="post comment">
 	</form>
     </div>
@@ -59,16 +57,16 @@
 </div>
 <script>
  function showReplySection(showbutton) {
-     var children = showbutton.parentElement.children;
+     var children = showbutton.parentElement.parentElement.children;
      
      for (var i=0; i < children.length; i++) {
 	 
-	 if (children[i].className == "comment-form") {
+	 if (children[i].className == "comment-reply-area") {
 	     el = children[i];
-	     if (el.style.display == "block") {
+	     if (el.style.display == "inline-flex") {
 		 el.style.display = "none";
 	     } else {
-		 el.style.display = "block";
+		 el.style.display = "inline-flex";
 	     }
 	 }
      }
@@ -79,7 +77,7 @@
 
 
 
-{% macro add_comment(parent_id=None) %}
+{% macro add_comment(parent_id) %}
 <form class="comment-form" action="/api/comment/submit" method="post">
     <!-- Note: when accepting this form data, you must provide username in flask -->
     <input type="hidden" value="{{ parent_id }}" name="parent_id">
