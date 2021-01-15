@@ -27,8 +27,13 @@ from flask_login import UserMixin
 
 
 
-
 Base = declarative_base(cls=(JsonSerializableBase,))
+
+link_to_tag = Table('link_to_tag', Base.metadata,
+                    Column('link_id', Integer, ForeignKey('link.id')),
+                    Column('tag_id', Integer, ForeignKey('tag.id'))
+                    )
+
 
 class LinkSchema(Schema):
     id = fields.Int()
@@ -51,7 +56,21 @@ class Link(Base):
     message_id = Column(Integer)
     relevance_score = Column(Integer)
     timestamp = Column(Integer)  # TODO: make me a date
-    tags = Column(String)
+    tags = relationship("Tag",
+                        secondary=link_to_tag,
+                        backref="links") 
+
+
+class TagSchema(Schema):
+    id = fields.Int()
+    name = fields.Str()
+
+class Tag(Base):
+
+    __tablename__ = "tag"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(15))
 
 
 class CommentSchema(Schema):
@@ -71,9 +90,9 @@ class Comment(Base):
     user_id = Column(Integer)
     content = Column(String)
     parent_id = Column(Integer, ForeignKey("comment.id"), index=True)
-    children = relationship('Comment', backref="parent", lazy='joined')
+    children = relationship('Comment', back_populates="parent", lazy='joined')
 
-    parent = relationship(lambda: Comment, remote_side=id, backref="children")
+    parent = relationship("Comment", remote_side=id, back_populates="children", lazy='joined')
 
 
 

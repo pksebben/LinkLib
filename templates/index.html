@@ -1,7 +1,7 @@
 <!-- following the advice here: https://pythonise.com/categories/javascript/infinite-lazy-loading -->
 {% extends "base.html" %}
 {% block head %}
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="templates/styles.css">
 {% endblock %}
 {% block content %}
 	<div class="header">
@@ -82,12 +82,6 @@
 			    {% for comment in rfc_comments %}
 			    {{ macro.comment(comment.content, comment.author, comment.timestamp, comment.id, comment.children) }}
 			    {% endfor %}
-			    <h3 class="comment-username">comment.username</h3>
-			    <p class="comment-timestamp">comment.timestamp</p>
-			    <p class="comment-body">comment.body</p>
-			    <div class="comment-children-comments">
-				<h4>place comment tree here</h4>
-			    </div>
 			</div>
 		    </div>
 		    <!-- <div class="d-flex justify-content-center mb-3" id="sentinel"> -->

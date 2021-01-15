@@ -4,16 +4,28 @@ import datetime
 from flask_login import login_required
 from flask_login import current_user
 from flask import request, render_template, jsonify, make_response
+
+
 """
 API
 
 All hits to the db should go through here
 
+TODO: fix comments to display user name instead of id#
+TODO: fix comments so they load up the whole tree appropriately
+   !: Are children appropriately populated?
+   !: If so, are they being pulled from the database correctly?
+   !: If so, are they being sent to the jinja template?
+   !: If so, why are they not being shown correctly?
+TODO: Cleanme
+
 Qs
 Do we want to have helper functions defined here or in db?
 """
 
+
 bp = flask.Blueprint("api", __name__,  template_folder="templates")
+
 
 
 # Initialize variables for load_
@@ -25,15 +37,24 @@ schema = models.LinkSchema(many=True)
 @bp.route('/api/comment/submit', methods=['POST'])
 @login_required
 def post_comment():
+    # TODO: For some reason the form isn't loading these fields correctly
+    print("New comment added")
     content = request.form.get('content')
     parent_id = request.form.get('parent_id')
-    userid = current_user.id
-    db.sqla.session.add(models.Comment(
-        timestamp = datetime.datetime.now(),
-        user_id = userid,
+    user_id = current_user.id
+    timestamp = datetime.datetime.now()
+    print("parent id: {} \nuser id: {}\ncontent: {}\ntimestamp: {}\n".format(parent_id, user_id, content, timestamp))
+    comment = models.Comment(
+        timestamp = timestamp,
+        user_id = user_id,
         parent_id = parent_id,
         content = content
-    ))
+    )
+
+    models.Comment.get(parent_id)
+    # parent = db.sqla.session.query(models.Comment).get(parent_id)
+    parent.children.append(comment)
+    # db.sqla.session.add(comment)
     db.sqla.session.commit()
     return flask.redirect("/")
 
@@ -83,6 +104,7 @@ def load_comments():
 
     if table == "comment":
         results = db.sqla.session.query(models.Comment).get(id)
+        print("RESULTS ARE:    ", results)
         return flask.jsonify(results)
     else:
         return "bad query", 500

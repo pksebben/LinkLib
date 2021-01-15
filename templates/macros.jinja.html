@@ -22,6 +22,9 @@
     <div class="comment-body">
 	<div class="comment-header">
 	    <div class="comment-at-box">
+		    <div class="comment-at-vote-box"><button 
+			class="upvote"><|</button><button 
+			class="downvote">|></button></div>
 		<p class="comment-timestamp headtext">{{ timestamp }}</p>
 		<p class="comment-author headtext">{{ author }}</p>
 	    </div>
@@ -29,13 +32,19 @@
 	</div>
 	<p class="comment-content">{{ content }}</p>
     </div>
-    
-    <div class="comment-reply-area" id=commentID>
+
+	<!-- Comment Actions -->
+    <div class="comment-action-box">
+	<button class="comment-action-hide">hide</button>
 	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+    </div>
+    
+    <div class="comment-reply-area">
 	
+	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
 	<form class="comment-form" action="/api/comment/submit" method="post">
-	    <input type="hidden" value="{{ id }}" id="parent_id">
-	    <textarea class="comment-form-textarea" wrap="hard" id="content"></textarea>
+	    <input type="hidden" value="{{ id }}" id="parent_id" name="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content" name="content"></textarea>
 	    <!-- <input class="comment-form-textarea" type="textarea" wrap="hard"> -->
 	    <input class="comment-form-submit" type="submit" value="post comment">
 	</form>
