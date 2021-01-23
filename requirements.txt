@@ -13,3 +13,5 @@ psycopg2-binary
 sqlalchemy
 marshmallow
 flask_jsontools
+docopt
+livereload
