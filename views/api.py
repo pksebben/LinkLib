@@ -41,6 +41,8 @@ def post_comment():
     print("New comment added")
     content = request.form.get('content')
     parent_id = request.form.get('parent_id')
+    if parent_id == "":
+        parent_id = None
     user_id = current_user.id
     timestamp = datetime.datetime.now()
     print("parent id: {} \nuser id: {}\ncontent: {}\ntimestamp: {}\n".format(parent_id, user_id, content, timestamp))
@@ -55,38 +57,43 @@ def post_comment():
         parent.children.append(comment)
     db.sqla.session.add(comment)
     db.sqla.session.commit()
-    return flask.redirect("/")
+
+    res = {
+        "id" : comment.id,
+        "author" : db.sqla.session.query(models.User).get(user_id).name,
+        "timestamp" : timestamp,
+        "content" : content
+    }
+    return flask.jsonify(res)
 
 
+# @login_required
 @bp.route('/load', methods=['POST'])
-@login_required
-def load_comments():
+def load_content():
     '''
-    load a comment tree
-    TODO: finish me
-    this should:
-    1. grab a root comment
-    2. grab all children of that comment
-    3. serve these as a list
+    flexible post-based loading from sql.
 
-    the design intention is that anything implementing this knows how to distinguish 
-    a 'root' comment (one with no parent) and knows how to connect a chain of comments
-    using parent ids / comment ids.
+    POST request must define:
+    table:  what table to load results from (comment, link, etc.)
+    id:  id of desired resource
     '''
-    table = request.form['table'].data
-    id = request.form['id'].data
+    table = flask.request.form.get('table')
+    id = flask.request.form.get("id")
 
     if table == "comment":
         results = db.sqla.session.query(models.Comment).get(id)
-        print("RESULTS ARE:    ", results)
-        return flask.jsonify(results)
+        print(type(results.parent_id))
+        schema = models.CommentSchema()
+        serialized = schema.dump(results)
+        print("RESULTS ARE:    ", serialized)
+        return flask.jsonify(serialized)
     else:
         return "bad query", 500
 
-    
+
 @bp.route('/load/<streamid>', methods=["GET"])
 @login_required
-def load(streamid):
+def load_links(streamid):
     '''
     TODO: fix the name
     loads a block of posts (at the moment, only links are supported.)
@@ -101,6 +108,11 @@ def load(streamid):
     global links
     if flask.request.args:
         if stream_id == streamid:
+            """
+            This checks if streamid is provided and uses a default (set up top) if not.
+
+            I don't like this way of doing business.  It makes the code unclear.
+            """
             print("loading links from stream: " + str(stream_id) )
             counter = int(flask.request.args.get("c"))
             # links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream_id).all()

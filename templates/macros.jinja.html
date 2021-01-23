@@ -17,6 +17,40 @@
 {% endmacro %}
 
 
+<!-- THIS IS THE TEMPLATE FOR COMMENTS.  NEEDED FOR AJAX POSTING, MAYBE MORE ITF -->
+<comment class="comment" id="comment-template">
+    <div class="comment-body">
+	<div class="comment-header">
+	    <div class="comment-at-box">
+		    <div class="comment-at-vote-box"><button 
+			class="upvote"><|</button><button 
+			class="downvote">|></button></div>
+		<p class="comment-timestamp headtext">timestamp</p>
+		<p class="comment-author headtext">author</p>
+	    </div>
+	    <p class="comment-id headtext">id</p>
+	</div>
+	<p class="comment-content">content</p>
+    </div>
+
+    <!-- Comment Actions -->
+    <div class="comment-action-box">
+	<button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
+	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+    </div>
+    
+    <!-- Comment Reply Area -->
+    <div class="comment-reply-area">	
+	<form class="comment-form" action="/api/comment/submit" method="post">
+	    <input type="hidden" value="{{ id }}" id="parent_id" name="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content" name="content"></textarea>
+	    <input class="comment-form-submit" type="submit" value="post comment">
+	</form>
+    </div>
+    <div class="comment-child-area child-area">
+    </div>
+</comment>
+
 {% macro comment(content,author,timestamp,id,children=None) %}
 <div class="comment" id="comment-{{ id }}">
     <div class="comment-body">
@@ -35,7 +69,7 @@
 
     <!-- Comment Actions -->
     <div class="comment-action-box">
-	<button class="comment-action-hide">hide</button>
+	<button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
 	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
     </div>
     
@@ -47,15 +81,82 @@
 	    <input class="comment-form-submit" type="submit" value="post comment">
 	</form>
     </div>
-    <div class="comment-child-area">
+    <div class="comment-child-area child-area">
 	{% if children %}
 	{% for child_comment in children %}
-	{{ comment(child_comment.content, child_comment.author, child_comment.timestamp, child_comment.id, child_comment.children) }}
+	{{ comment(child_comment.content, child_comment.author.name, child_comment.timestamp, child_comment.id, child_comment.children) }}
 	{% endfor %}
 	{% endif %}
     </div>
 </div>
 <script>
+
+ /* Experimental AJAX post behavior */
+ console.log("Getting comments...");
+ const comment_list = document.querySelectorAll(".comment-form-submit");
+ console.log(comment_list);
+ for (var i=0; i < comment_list.length; i++ ) {
+     comment_list[i].addEventListener("submit", postComment);
+ }
+ 
+ async function postCommentAjax({data}) {
+     console.log("POSTING COMMENT AJAX STYLE");
+     const res = await fetch('/load', {
+	 method: 'POST',
+	 mode: 'cors',
+	 cache: 'no-cache',
+	 credentials: 'same-origin',
+	 headers: {
+	     'Content-Type' : 'multipart/form-data'
+	 },
+	 redirect: 'follow',
+	 referrerPolicy: 'no-referrer',
+	 body: data,
+     });
+     return response.json();
+ }
+
+ async function postComment(event) {
+     event.preventDefault();
+
+     const form = event.currentTarget;
+     const url = form.action;
+
+     try {
+	 const formData = new FormData(form);
+	 const resData = await postCommentAjax(formData);
+	 const newComment = createComment(resData.id, resData.timestamp, resData.author, resData.content);
+	 const childArea = form.parentElement.querySelector(".child-area");
+	 childArea.appendChild();
+     } catch {
+	 alert("there was a problem submitting this comment.  Delete this message for prod.");
+     }
+ }
+
+ function createComment(id, timestamp, author, content) {
+     let comment_template_clone = comment.content.cloneNode(true);
+     comment_template_clone.querySelector(".comment-timestamp").innerHTML = timestamp;
+     comment_template_clone.querySelector(".comment-author").innerHTML = author;
+     comment_template_clone.querySelector(".comment-id").innerHTML = id;
+     comment_template_clone.querySelector(".comment-content").innerHTML = content;
+     comment_template_clone.querySelector(".comment").id = "comment-" + id;
+     return comment_template_clone;
+ }
+
+ /* End Experimental AJAX post behavior */
+ 
+ function hideChildren(element) {
+     var el = document.getElementById(element);
+
+     var childarea = el.querySelector(".child-area");
+     if (childarea.style.display != "none") {
+	 childarea.toggledisplay = childarea.style.display;
+	 childarea.style.display = "none";
+     } else {
+	 childarea.style.display = childarea.toggledisplay;
+     }
+ }
+ 
  function showReplySection(showbutton) {
      var children = showbutton.parentElement.parentElement.children;
      

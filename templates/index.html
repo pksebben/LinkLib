@@ -19,10 +19,10 @@
 	</div>
 	</div>
 	
-	<div class="container">
+	<div class="index-container">
 	    <div class="row">
 
-		<div class="col-sm">
+		<div class="link-section">
 		    <div class="link-section-header">
 			<h2>The Links</h2>
 			<p>Here they are, the Zulip links.  Each link has an associated comment thread, buttons to flag the link as "high-value", "interesting", or even "candidate for culling" (in the likely event that it does not represent something likely to be interesting to anyone outside of the conversation in which it originated).  In the comments, you can vote to pin a comment as a permanent sort of link description, which will bubble it to the top of the conversation so that it's the first thing someone sees when they see the link (hopefully, reducing the amount of time spent assessing what to click)</p>
@@ -59,13 +59,12 @@
 
 		
 		    </div>
+
+
 	
-		    <div class="d-flex justify-content-center mb-3" id="sentinel">
-		      <div class="spinner-border" role="status"></div>
-		    </div>
 		</div>
 
-		<div class="col-sm">
+		<div class="rfc-section">
 		    <h2 class="rfc-header-title">Request For Comments</h2>
 		    <p class="rfc-header-greeting">I know, I know, it's not pretty.  I didn't want to waste valuable time dolling it up at the cost of not having it available for you guys to look at, because I want the development of this platform to be as democratic as possible.  I extend the heartiest of invitations to comment, critique, make suggestions, anything.  There are no bad ideas.  My intent is that we collectively use this site as a vehilcle to help future batches (and, if we do it right, benefit from easy access to their contributions) and a way for all recursers; past, present, and future, to share the juiciest and most fascinating things they come across.  The links are just here to start the conversation - what would <bold>you</bold> like to tell the world?</p>
 		    <div class="rfc-buffer">
@@ -73,23 +72,27 @@
 			      {{ macro.add_comment() }}
 			</div>
 			<div class="comment-area">
-			    {% if root_rfc_comment is not none %}
-			    {{ macro.comment(root_rfc_comment.content, root_rfc_comment.author.name, root_rfc_comment.timestamp, root_rfc_comment.id, root_rfc_comment.children) }}
 			    {% for comment in rfc_comments %}
-			    {{ macro.comment(comment.content, comment.author, comment.timestamp, comment.id, comment.children) }}
+			    {{ macro.comment(comment.content, comment.author.name, comment.timestamp, comment.id, comment.children) }}
 			    {% endfor %}
-			    {% endif %}
 			</div>
 		    </div>
-		    <!-- <div class="d-flex justify-content-center mb-3" id="sentinel"> -->
-		    <!-- 	<div class="spinner-border" role="status"></div> -->
-		    <!-- </div> -->
 		</div>
 	    </div>
 	</div>
+	<div class="d-flex justify-content-center mb-3" id="sentinel">
+	    <div class="spinner-border" role="status"></div>
+	</div>
+
 	{% endblock %}
     </body>
     <script>
+
+     function reload_linkbuffer() {
+	 var linkbuffer = document.querySelector("#link-buffer");
+	 console.log("reload linkbuffer IS defined!");
+	 // TODO: finish
+     }
      // Get references to the dom elements
      var scroller = document.querySelector("#link-buffer");
      var template = document.querySelector('#link-template');
@@ -99,11 +102,6 @@
      // Set a counter to count the items loaded
      var counter = 0;
 
-     function reload_linkbuffer() {
-	 var linkbuffer = document.querySelector("#link-buffer");
-	 linkbuffer.innerHTML = "";
-	 // TODO: finish
-     }
 
      // Function to request new items and render to the dom
      function loadItems() {
@@ -152,17 +150,23 @@
 	     
 	 }
 	 )
-     }	     
+     }
+
+     let intersect_options = {
+	 root: null,
+	 rootMargin: '0px',
+	 threshold: 1.0
+     }
 
      // Create a new IntersectionObserver instance
      var intersectionObserver = new IntersectionObserver(entries => {
 
-	 // Uncomment below to see the entry.intersectionRatio when
+	 /* Uncomment below to see the entry.intersectionRatio when */
 	 // the sentinel comes into view
 
-	 // entries.forEach(entry => {
-	 //   console.log(entry.intersectionRatio);
-	 // })
+	 entries.forEach(entry => {
+	     console.log(entry.intersectionRatio);
+	 })
 
 	 // If intersectionRatio is 0, the sentinel is out of view
 	 // and we don't need to do anything. Exit the function
@@ -173,7 +177,7 @@
 	 // Call the loadItems function
 	 loadItems();
 
-     });
+     }, intersect_options);
 
      // Instruct the IntersectionObserver to watch the sentinel
      intersectionObserver.observe(sentinel);

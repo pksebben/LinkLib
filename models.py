@@ -80,19 +80,21 @@ class Tag(Base):
 
 class CommentSchema(Schema):
     id = fields.Int()
-    timestamp = fields.Int()
-    user_id = fields.Int()
+    timestamp = fields.Str()
     content = fields.Str()
-    parent_id = fields.Int()
-    children = fields.List(fields.Int())
+
+    score = fields.Int()
+    
+    user_id = fields.Int()
+    parent_id = fields.Int(allow_none=True)
 
 class Comment(Base):
 
     __tablename__ = "comment"
 
     id = Column(Integer, primary_key = True)
-    timestamp = Column(Integer)
-    content = Column(Text)
+    timestamp = Column(Integer, nullable=False)
+    content = Column(Text, nullable=False)
 
     # Interaction flags
     score = Column(Integer, default=0, nullable=False)
@@ -102,7 +104,7 @@ class Comment(Base):
     author = relationship("User", back_populates="comments")
 
     # Tree behavior - subcomments and subcomments of subcomments
-    parent_id = Column(Integer, ForeignKey("comment.id"), index=True)
+    parent_id = Column(Integer, ForeignKey("comment.id"), index=True, nullable=True)
     children = relationship('Comment', back_populates="parent", lazy='joined')
     parent = relationship("Comment", remote_side=id, back_populates="children", lazy='joined')
 

@@ -1,3 +1,13 @@
+"""LinkLib
+Usage:
+   app.py
+   app.py live
+"""
+import os
+
+from livereload import Server, shell
+from docopt import docopt
+
 import sys
 import logging
 
@@ -17,11 +27,11 @@ import db, container, models
 
 app = flask.Flask(__name__, static_folder='static')
 
+DEBUG = True
+ENDPOINT = "tcp:8081"
 
 def main():
     """perform a grabbag of necessary initialization and run the app"""
-    ENDPOINT = "tcp:8081"
-    DEBUG = True
     
     
     app.jinja_loader = PackageLoader(__name__, 'templates')
@@ -37,7 +47,6 @@ def main():
     app.secret_key = 'mbvc5s4r67uyd4fhgyvdst78g9hobigrn3jefb2iy8w79ui3v'
     login.init_app(app)
 
-    container.run(app, ENDPOINT, DEBUG)
 
 
 def init(blueprints):
@@ -67,7 +76,19 @@ def init_logging():
 
 
 if __name__ == "__main__":
+    args = docopt(__doc__, version="LinkLib Livereload 0.1")
     db.init(app)
     init_logging()
     init([index, link, login_view, register, api, testpage])
     main()
+    if not args['live']:    
+        container.run(app, ENDPOINT, DEBUG)
+    else:
+        app.debug = True
+        server = Server(app.wsgi_app)
+        server.watch('static/*')
+        server.watch('templates/*')
+        server.serve(liveport=8082,
+                     host='localhost',
+                     open_url_delay=0,
+                     debug=True)
