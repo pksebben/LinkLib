@@ -35,29 +35,49 @@ quantity = 20  # num posts to return per request
 schema = models.LinkSchema(many=True)
 
 @bp.route('/api/comment/submit', methods=['POST'])
-@login_required
 def post_comment():
-    # TODO: For some reason the form isn't loading these fields correctly
+    """
+    POSTs a new comment to the database.
+
+    Required fields for the request:
+       'parent_id' :   can be an integer, '', or null
+       'content' : a string
+
+    The fields for userid, timestamp, and id(primary key) are populated below, or by the db.
+    """
     print("New comment added")
+
+    # populate comment fields
     content = request.form.get('content')
-    parent_id = request.form.get('parent_id')
-    if parent_id == "":
-        parent_id = None
+    parent_id = request.form.get('parent_id', None)
     user_id = current_user.id
     timestamp = datetime.datetime.now()
+
+    # null the parent id if empty string.
+    if parent_id == "":
+        parent_id = None
+
+    # log comment entry
     print("parent id: {} \nuser id: {}\ncontent: {}\ntimestamp: {}\n".format(parent_id, user_id, content, timestamp))
+
+    # create the comment object
     comment = models.Comment(
         timestamp = timestamp,
         user_id = user_id,
         parent_id = parent_id,
         content = content
     )
+
+    # try to find the parent. If it exists, append this comment to it.
     parent = db.sqla.session.query(models.Comment).get(parent_id)
     if parent:    
         parent.children.append(comment)
+
+    # add and commit
     db.sqla.session.add(comment)
     db.sqla.session.commit()
 
+    # return a representation of the comment just added.  This is meant for consumption by AJAX calls.
     res = {
         "id" : comment.id,
         "author" : db.sqla.session.query(models.User).get(user_id).name,
