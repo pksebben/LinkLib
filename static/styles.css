@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    /* font-size: inherit; */
     /* vertical-align: baseline; */
 }
 select, option {
@@ -28,7 +28,7 @@ button {
     border-radius: 2px;
 }
 .comment-form-submit {
-     font: var(--font-menu);
+    font: var(--font-menu);
     color: var(--bg-1);
     background-color: var(--text-1-p);
     border: solid 2px var(--text-1-p);

@@ -1,7 +1,7 @@
 :root {
     --font-body: 15px "Fira Code Light", sans-serif;
     --font-head: 25px "Fira Code Retina", sans-serif;
-    --font-menu: 15px "Fira Code Retina", sans-serif;
+    --font-menu: 12px "Fira Code Retina", sans-serif;
 	
     --scheme-bg-1: #e9f6ff;
     --scheme-text-1-l: #592296;

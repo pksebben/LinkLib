@@ -8,8 +8,189 @@
     </head>
     <body>
     {% block content %}
-    {% endblock %}
+	{% endblock %}
+	<template class="comment-template">
+	    <div class="comment">
+		<div class="comment-body">
+		    <div class="comment-header">
+			<div class="comment-at-box">
+			    <div class="comment-at-vote-box"><button
+								 class="upvote"><|</button><button
+											       class="downvote">|></button></div>
+			    <p class="comment-timestamp headtext">{{ timestamp }}</p>
+			    <p class="comment-author headtext">{{ author }}</p>
+			</div>
+			<p class="comment-id headtext">{{ id }}</p>
+		    </div>
+		    <p class="comment-content">{{ content }}</p>
+		</div>
+
+		<!-- Comment Actions -->
+		<div class="comment-action-box">
+		    <button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
+		    <button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+		</div>
+
+		<!-- Comment Reply Area -->
+		<div class="comment-reply-area">
+		    <form class="comment-form" action="/api/comment/submit" method="post">
+			<input type="hidden" value="{{ id }}" id="comment-{{id}}-form" name="parent_id">
+			<textarea class="comment-form-textarea" wrap="hard" id="content-{{id}}" name="content"></textarea>
+			<input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
+		    </form>
+		</div>
+		<div class="comment-child-area child-area">
+		</div>
+	    </div>
+	</template>
     </body>
+
+<script>
+
+
+ console.log('script imported');
+ var els = document.getElementsByClassName('comment-form');
+ for (let i = 0; i < els.length; i++) {
+     els[i].addEventListener("submit", postCommentHandler);
+ }
+ 
+ async function ajaxifyForm(event) {
+     /* AJAXIFY FORM
+	Overrides form behavior and returns json.  For consumption
+	by appropriately crafted API endpoints (that return json in response to a post)
+
+	to apply to a form, select the form like so:
+
+	const form = document.querySelector(".content-form");
+	form.addEventListener("submit", postCommentHandler);
+
+	(it may also be possible to use the pattern onsubmit="ajaxifyForm" in the html tag)
+	
+	this should override the form's native behavior and return 
+	a json response from the submit comment api that represents
+	the inserted comment, for use in ajax updating of the page.
+
+	Because some jerk wrote a dumb spec, we also need to 'grab'
+	the return of this function in another async function that 
+	awaits it's value, because it would make too much sense
+	to have a function that resolves promises by itself. See 
+	boilerplate fix-for-dumb-laguage-quirk #284403319 below
+
+	async function postCommentHandler(event) {
+	const comment = await ajaxifyForm(event);
+	console.log("you may do things with comment here.");
+	}
+
+	NOTE: This may be used anywhere we require turning a form 
+	into an ajax call!
+      */
+     
+     /* we don't want the usual behaviors (like reloading the page) */
+     event.preventDefault();
+
+     /* get the form, then populate a new FormData from it. */
+     var form = event.target;
+     var formData = new FormData(form);
+
+     /* where is this form sending data? */
+     var url = form.action;
+
+     /* submit the request. Careful modifying this - it was the source of many a headache. */
+     const res = await fetch(url, {
+	 method : 'POST',
+	 mode: 'cors',
+	 credentials: 'same-origin',
+	 cache : "no-cache",
+	 referrerPolicy: 'no-referrer',
+	 redirect: 'follow',
+	 body: formData,
+     });
+
+     /* check for errors and be loud about them */
+     if (!res.ok) {
+	 alert("bad request");  /* change me to log */
+	 const message = "bad response: ${res.status}";
+	 throw new Error(message);
+     }
+
+     /* return. this second await may or may not be surpurflous. idc.  */
+     const results = await res.json();
+     return results;
+ }
+ 
+ function createComment(comment) {
+     /* TODO: we need to bubble parent_id into here somehow */
+
+     /* check if browser supports templates */
+     if ('content' in document.createElement('template')) {
+	 /* grab the comment template and inject comment data */
+
+	 /* TODO: make me look like a real comment */
+	 var template = document.querySelector('.comment-template');
+	 var clone = template.content.cloneNode(true);
+
+	 clone.querySelector('.comment-author').innerHTML = comment.author;
+	 clone.querySelector(".comment-timestamp").innerHTML = comment.timestamp;
+	 clone.querySelector(".comment-id").innerHTML = comment.id;
+	 clone.querySelector(".comment-content").innerHTML = comment.content;
+     } else {
+	 var clone = "<h1 color='red'>IT DID NOT CLONE GUD</p>";
+	 const message = "It appears as if this browser does not support templates.";
+	 throw new Error(message);
+     }
+     return clone;
+ }
+
+
+ async function postCommentHandler(event) {
+     /* send comment and retrieve json representation */
+     const comment = await ajaxifyForm(event);
+
+     console.log(event);
+     console.log(event.target);
+     console.log(event.target.parentElement);
+
+     /* CHANGE ME TO RETRIEVE THE CORRECT ELEMENT */
+     var commentChildArea = event.target.parentElement.parentElement.querySelector('.comment-child-area');
+     console.log(commentChildArea);
+
+     var template = createComment(comment);
+     commentChildArea.appendChild(template);
+ }
+
+ /* PREVIOUS CODE HAS BEEN TESTED AND WORKS */
+ 
+ /* TODO: avoid needing to be explicit about the element in question */
+ function hideChildren(element) {
+     var el = document.getElementById(element);
+
+     var childarea = el.querySelector(".child-area");
+     if (childarea.style.display != "none") {
+	 childarea.toggledisplay = childarea.style.display;
+	 childarea.style.display = "none";
+     } else {
+	 childarea.style.display = childarea.toggledisplay;
+     }
+ }
+
+ function showReplySection(showbutton) {
+     var children = showbutton.parentElement.parentElement.children;
+
+     for (var i=0; i < children.length; i++) {
+
+	 if (children[i].className == "comment-reply-area") {
+	     el = children[i];
+	     if (el.style.display == "inline-flex") {
+		 el.style.display = "none";
+	     } else {
+		 el.style.display = "inline-flex";
+	     }
+	 }
+     }
+ }
+</script>
+
+
 </html>
 
 <!-- TEMPLATE TODOs -->

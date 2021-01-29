@@ -76,12 +76,12 @@
     <!-- Comment Reply Area -->
     <div class="comment-reply-area">
 	<form class="comment-form" action="/api/comment/submit" method="post">
-	    <input type="hidden" value="{{ id }}" id="parent_id" name="parent_id">
-	    <textarea class="comment-form-textarea" wrap="hard" id="content" name="content"></textarea>
-	    <input class="comment-form-submit" type="submit" value="post comment">
+	    <input type="hidden" value="{{ id }}" id="comment-{{id}}-form" name="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content-{{id}}" name="content"></textarea>
+	    <input class="comment-form-submit" type="submit" value="post comment" >
 	</form>
     </div>
-    <div class="comment-child-area child-area">
+    <div class="comment-child-area">
 	{% if children %}
 	{% for child_comment in children %}
 	{{ comment(child_comment.content, child_comment.author.name, child_comment.timestamp, child_comment.id, child_comment.children) }}
@@ -89,100 +89,9 @@
 	{% endif %}
     </div>
 </div>
-<script>
-
- /* Experimental AJAX post behavior */
- console.log("Getting comments...");
- const comment_list = document.querySelectorAll(".comment-form-submit");
- console.log(comment_list);
- for (var i=0; i < comment_list.length; i++ ) {
-     comment_list[i].addEventListener("submit", postComment);
- }
-
- /* async function postCommentAjax({data}) {
-  *     console.log("POSTING COMMENT AJAX STYLE", data);
-  *     const res = await fetch('/load', {
-    method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    headers: {
-    'Content-Type' : 'multipart/form-data'
-    },
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer',
-    body: data,
-  *     });
-  *     return res.json();
-  * } */
-
- async function postComment(event) {
-     event.preventDefault();
-     const form = e.target;
-     const content = form.querySelector('textarea').value;
-     const parent_id = form.querySelector('input[type=hidden]').value;
-
-     const request = {
-	 form: { content, parent_id },
-     };
-
-     //  const form = event.currentTarget;
-     //  const url = form.action;
-
-     try {
-	 const formData = new FormData(form);
-	 const resData = await postCommentAjax(formData);
-	 const newComment = createComment(resData.id, resData.timestamp, resData.author, resData.content);
-	 const childArea = form.parentElement.querySelector(".child-area");
-	 childArea.appendChild();
-     } catch (err) {
-	 console.log(err);
-	 alert("there was a problem submitting this comment.  Delete this message for prod.");
-     }
- }
-
- function createComment(id, timestamp, author, content) {
-     let comment_template_clone = comment.content.cloneNode(true);
-     comment_template_clone.querySelector(".comment-timestamp").innerHTML = timestamp;
-     comment_template_clone.querySelector(".comment-author").innerHTML = author;
-     comment_template_clone.querySelector(".comment-id").innerHTML = id;
-     comment_template_clone.querySelector(".comment-content").innerHTML = content;
-     comment_template_clone.querySelector(".comment").id = "comment-" + id;
-     return comment_template_clone;
- }
-
- /* End Experimental AJAX post behavior */
-
- function hideChildren(element) {
-     var el = document.getElementById(element);
-
-     var childarea = el.querySelector(".child-area");
-     if (childarea.style.display != "none") {
-	 childarea.toggledisplay = childarea.style.display;
-	 childarea.style.display = "none";
-     } else {
-	 childarea.style.display = childarea.toggledisplay;
-     }
- }
-
- function showReplySection(showbutton) {
-     var children = showbutton.parentElement.parentElement.children;
-
-     for (var i=0; i < children.length; i++) {
-
-	 if (children[i].className == "comment-reply-area") {
-	     el = children[i];
-	     if (el.style.display == "inline-flex") {
-		 el.style.display = "none";
-	     } else {
-		 el.style.display = "inline-flex";
-	     }
-	 }
-     }
- }
-</script>
-
 {% endmacro %}
+
+
 
 
 
@@ -194,6 +103,6 @@
     <!-- Note: when accepting this form data, you must provide username in flask -->
     <input type="hidden" value="{{ parent_id }}" name="parent_id">
     <textarea class="comment-form-textarea" wrap="hard" name="content"></textarea>
-    <input class="comment-form-submit" type="submit" value="post comment">
+    <input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
 </form>
 {% endmacro %}
