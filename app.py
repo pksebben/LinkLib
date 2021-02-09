@@ -21,7 +21,7 @@ from flask_humanize import Humanize
 from flask import json
 from flask_login import LoginManager
 
-from views import index, link, register, api, testpage, alternate_index
+from views import index, link, register, api, testpage
 from views import login as login_view
 import db, container, models
 
@@ -44,7 +44,9 @@ def main():
     def load_user(id):
         return db.sqla.session.query(models.User).get(int(id))
 
-    app.secret_key = 'mbvc5s4r67uyd4fhgyvdst78g9hobigrn3jefb2iy8w79ui3v'
+    config = json.load(open('config.json'))
+
+    app.secret_key = config['secret_key']
     login.init_app(app)
 
 
@@ -79,7 +81,7 @@ if __name__ == "__main__":
     args = docopt(__doc__, version="LinkLib Livereload 0.1")
     db.init(app)
     init_logging()
-    init([index, link, login_view, register, api, testpage, alternate_index])
+    init([index, link, login_view, register, api, testpage])
     main()
     if not args['live']:    
         container.run(app, ENDPOINT, DEBUG)

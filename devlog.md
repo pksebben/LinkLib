@@ -21,6 +21,10 @@
  - Autocomplete in the stream search
  - Comprehensive db searching / advanced search
  - Bot that scrapes for new links (perhaps this could just be a cron api call.  A bot would be better, though.)
+ - User pages (visited links / posted comments / etc)
+ - Page visting mechanics /  history manip
+ - favoriting links
+ - replace link urls with title tag from head requests ****
 
 # Old Doc 
 

@@ -19,17 +19,8 @@ Index.  The main page.
 bp = flask.Blueprint('index', __name__, template_folder="templates")
 
 
-@bp.route('/', methods=["GET"])
 @login_required
+@bp.route('/', methods=["GET"])
 def index():
-    print("this is stdout")
-    root_comments = db.sqla.session.query(models.Comment).filter(models.Comment.parent_id == None).all()
-    print(root_comments)
-
-
-    # TESTING
-    child_comments = db.sqla.session.query(models.Comment).filter(models.Comment.parent_id == 4).all()
-
-    # //TESTING
     streams = json.load(open("streams.json"))
-    return render_template("index.html", streams=streams["streams"], rfc_comments=root_comments)
+    return render_template("index.html", streams=streams["streams"])
