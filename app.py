@@ -2,6 +2,7 @@
 Usage:
    app.py
    app.py live
+   app.py waitress
 """
 import os
 
@@ -15,6 +16,7 @@ import structlog
 from structlog import twisted, get_logger
 from twisted.python import log
 from jinja2 import PackageLoader
+from waitress import serve
 
 import flask
 from flask_humanize import Humanize
@@ -83,9 +85,7 @@ if __name__ == "__main__":
     init_logging()
     init([index, link, login_view, register, api, testpage])
     main()
-    if not args['live']:    
-        container.run(app, ENDPOINT, DEBUG)
-    else:
+    if args['live']:
         app.debug = True
         server = Server(app.wsgi_app)
         server.watch('static/*')
@@ -94,3 +94,7 @@ if __name__ == "__main__":
                      host='localhost',
                      open_url_delay=0,
                      debug=True)
+    elif args['waitress']:
+        serve(app, listen='*:8080')
+    else:
+        container.run(app, ENDPOINT, DEBUG)
