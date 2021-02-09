@@ -1,5 +1,4 @@
-.index-container {
-    align-items: center;
+.row {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
@@ -9,12 +8,13 @@
 
 .link-section {
     width: calc(50% - 10px); 
-    display: inline-block;
+    /* display: inline-block; */
+    align-self: flex-start;
 }
 
 .rfc-section {
     width: calc(50% - 10px); 
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .d-flex {

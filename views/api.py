@@ -86,6 +86,21 @@ def post_comment():
     }
     return flask.jsonify(res)
 
+# pretty sure this next bit was a typo
+# @bp.route('/')
+
+
+@login_required
+@bp.route('/api/markvisited/<linkid>', methods=['GET'])
+def mark_visited(linkid):
+    user = db.sqla.session.query(models.User).get(current_user.id)
+    link = db.sqla.session.query(models.Link).get(linkid)
+    user.visited_links.append(link)
+    db.sqla.session.commit()
+
+    return "link added to viewed", 200
+    
+    
 
 # @login_required
 @bp.route('/load', methods=['POST'])
@@ -111,9 +126,9 @@ def load_content():
         return "bad query", 500
 
 
-@bp.route('/load/<streamid>', methods=["GET"])
+@bp.route('/load/<streamid>/<counter>', methods=["GET"])
 @login_required
-def load_links(streamid):
+def load_links(streamid, counter):
     '''
     TODO: fix the name
     loads a block of posts (at the moment, only links are supported.)
@@ -126,7 +141,7 @@ def load_links(streamid):
     
     global stream_id
     global links
-    if flask.request.args:
+    if flask.request:
         if stream_id == streamid:
             """
             This checks if streamid is provided and uses a default (set up top) if not.
@@ -134,7 +149,8 @@ def load_links(streamid):
             I don't like this way of doing business.  It makes the code unclear.
             """
             print("loading links from stream: " + str(stream_id) )
-            counter = int(flask.request.args.get("c"))
+            # counter = int(flask.request.args.get("c"))
+
             # links = db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream_id).all()
             # links = filter_by_stream(stream_id)
             links = advanced_filter(stream_id = stream_id)
@@ -151,6 +167,8 @@ def load_links(streamid):
             print(f"returning posts: 0 :: {quantity}")
             l = schema.dump(links[0: quantity])
 
+            print("results are: %s" % l)
+
             # TODO: wire in to a db query
             res = flask.make_response(jsonify(l), 200)
 
@@ -159,10 +177,13 @@ def load_links(streamid):
             res = flask.make_response(jsonify({}), 200)
 
         else:
+            counter = int(counter)
+            print("counter = " + str(type(counter)))
             l = schema.dump(links[counter: counter + quantity])
             print(f"returning posts {counter} to {counter + quantity}")
             res = flask.make_response(jsonify(l), 200)
 
+        res.headers.add("Access-Control-Allow-Origin", "*")
         return res
 
 def filter_by_stream(stream):

@@ -34,6 +34,10 @@ link_to_tag = Table('link_to_tag', Base.metadata,
                     Column('tag_id', Integer, ForeignKey('tag.id'))
                     )
 
+visited_links = Table('visited_links', Base.metadata,
+                      Column('user_id', Integer, ForeignKey('user.id')),
+                      Column('link_id', Integer, ForeignKey('link.id'))
+                      )
 
 class LinkSchema(Schema):
     id = fields.Int()
@@ -63,7 +67,7 @@ class Link(Base):
                         backref="links") 
 
     # user-defined data
-    desc = Column(Text)
+    # desc = Column(Text)
 
 
 class TagSchema(Schema):
@@ -125,6 +129,7 @@ class User(UserMixin, Base):
     email = Column(String, nullable = False, unique=True)
     password_hash = Column(String())
     comments = relationship("Comment", back_populates="author")
+    visited_links = relationship("Link", secondary=visited_links)
 
     def set_password(self,password):
         self.password_hash = generate_password_hash(password)

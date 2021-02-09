@@ -21,7 +21,7 @@ from flask_humanize import Humanize
 from flask import json
 from flask_login import LoginManager
 
-from views import index, link, register, api, testpage
+from views import index, link, register, api, testpage, alternate_index
 from views import login as login_view
 import db, container, models
 
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     args = docopt(__doc__, version="LinkLib Livereload 0.1")
     db.init(app)
     init_logging()
-    init([index, link, login_view, register, api, testpage])
+    init([index, link, login_view, register, api, testpage, alternate_index])
     main()
     if not args['live']:    
         container.run(app, ENDPOINT, DEBUG)

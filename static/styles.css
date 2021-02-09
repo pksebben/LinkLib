@@ -1,6 +1,11 @@
 @import url("vars.css");
 @import url("comment.css");
 @import url("index.css");
+@import url("alt.css");
+
+body {
+    margin: 15px;
+}
 
 * {
     margin: 0;
@@ -9,6 +14,7 @@
     /* font-size: inherit; */
     /* vertical-align: baseline; */
 }
+
 select, option {
     width: 90%;
     font: var(--font-menu);
@@ -27,6 +33,7 @@ button {
     border: solid 2px var(--text-1-p);
     border-radius: 2px;
 }
+
 .comment-form-submit {
     font: var(--font-menu);
     color: var(--bg-1);

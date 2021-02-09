@@ -1,4 +1,4 @@
-<!-- following the advice here: https://pythonise.com/categories/javascript/infinite-lazy-loading -->
+!-- following the advice here: https://pythonise.com/categories/javascript/infinite-lazy-loading -->
 {% extends "base.html" %}
 {% block head %}
 <link rel="stylesheet" href="templates/styles.css">
@@ -8,14 +8,9 @@
 	    <h1>Recurse Library</h1>
 	    <img src="https://imgs.xkcd.com/comics/standards.png" href="https://xkcd.com/927/" />
 	    <h3>What is this?</h3>
-	    <p>Welcome to the Recurse Library.  At the moment, it isn't much, but that's because I wanted to provide a place for us to discuss what it should be. When first joining RC, a few of us were frustrated by a lack of cohesion between all the various and sundry *things* that recurse has to offer; blaggregator, zulip streams, the wiki, the orientation materials.  It wasn't that these things weren't any good (on the contrary, they were mostly quite rich) it was that they suffered from a lack of 1. Discoverability and 2. Indexing.  There were multiple sources of truth and it was a little difficult to figure out where to go to get the best sauce on a particular topic.</p>
-	    <p>The library is my attempt to address this.  I have two opinions on what the library should be / do, but beyond that what I would really like is for the rest of Recurse to pitch ideas into the pot until we have a stone soup of information persistence that tastes great fro all of us.</p>
-	    <h4>My Two Opinions:</h4>
-	    <p>1. It should be configurable and moddifiable by all, and establish a smooth experience for those who want to contribute.</p>
-	    <p>2. It should establish persistence and Discoverability by posting to zulip periodically, to remind all of it's existence and to drive engagement.</p>
-	    <p>Below, you will find a sample of link data from all past Zulip streams.  These have been culled on some fairly rough heuristics and will need further gardening to increase their utility as a store of knowledge, but I wanted to include them here as an example of one thing I think a platform like this should do: that is, make good information available in a format that makes it useful.</p>
-	    <p>You will also find a comment section.  This is where I want to start the discussion of what the perfect information persistence platform would look like to each of us.  </p>
-	    
+	    <p>
+		To be honest, I'm not sure myself.  It started as a way to tie together all the various Recurse "things". It has become more of a stumbleupon / hackernews mashup with a set of "affiliate" links (affiliates like blaggregator).  I'm hoping it becomes something of a conversation. 
+	    </p>
 	</div>
 	</div>
 	
@@ -66,7 +61,7 @@
 
 		<div class="rfc-section">
 		    <h2 class="rfc-header-title">Request For Comments</h2>
-		    <p class="rfc-header-greeting">I know, I know, it's not pretty.  I didn't want to waste valuable time dolling it up at the cost of not having it available for you guys to look at, because I want the development of this platform to be as democratic as possible.  I extend the heartiest of invitations to comment, critique, make suggestions, anything.  There are no bad ideas.  My intent is that we collectively use this site as a vehilcle to help future batches (and, if we do it right, benefit from easy access to their contributions) and a way for all recursers; past, present, and future, to share the juiciest and most fascinating things they come across.  The links are just here to start the conversation - what would <bold>you</bold> like to tell the world?</p>
+		    <p class="rfc-header-greeting">I'm really interested in what you all want out of a thing like this, whatever it might be.  Tell me what you'd like to see and I'll see if it can be implemented.  Alternatively, if you wanna hack on this thing I am absolutely not precious about it.  I actually had the (probably bad) idea to allow remote code execution for anyone with a valid Oauth from RC.  Yes, on purpose.  Nothing is off the table.  I haven't made that happen but I'm kinda itching to see what would happen.  I bet it would be super cool.</p>
 		    <div class="rfc-buffer">
 			 <div class="comment-input">
 			      {{ macro.add_comment() }}
