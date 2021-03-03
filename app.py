@@ -4,6 +4,7 @@ Usage:
    app.py live
    app.py waitress
 """
+
 import os
 
 from livereload import Server, shell
@@ -22,6 +23,7 @@ import flask
 from flask_humanize import Humanize
 from flask import json
 from flask_login import LoginManager
+from flask.logging import default_handler
 
 from views import index, link, register, api, testpage
 from views import login as login_view
@@ -32,9 +34,18 @@ app = flask.Flask(__name__, static_folder='static')
 DEBUG = True
 ENDPOINT = "tcp:8081"
 
+
+@app.after_request
+def after_request(res):
+    """log all requests"""
+    logger = logging.getLogger()
+
 def main():
     """perform a grabbag of necessary initialization and run the app"""
     
+
+    # TEST CODE
+    print(dir(default_handler))
     
     app.jinja_loader = PackageLoader(__name__, 'templates')
 
@@ -97,4 +108,5 @@ if __name__ == "__main__":
     elif args['waitress']:
         serve(app, listen='*:8080')
     else:
+        print("init container.py")
         container.run(app, ENDPOINT, DEBUG)

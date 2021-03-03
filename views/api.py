@@ -45,6 +45,7 @@ def post_comment():
 
     The fields for userid, timestamp, and id(primary key) are populated below, or by the db.
     """
+    log(flask.request)
     print("New comment added")
 
     # populate comment fields
@@ -184,6 +185,7 @@ def load_links(streamid, counter):
             res = flask.make_response(jsonify(l), 200)
 
         res.headers.add("Access-Control-Allow-Origin", "*")
+        print(res)
         return res
 
 def filter_by_stream(stream):

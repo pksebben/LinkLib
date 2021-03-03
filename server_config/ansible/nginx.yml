@@ -1,0 +1,33 @@
+- hosts: web
+  become: yes
+  tasks:
+    - name: "apt update"
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: "install nginx"
+      apt:
+        pkg: nginx
+        state: latest
+
+    - name: delete default nginx site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: restart nginx
+
+    - name: copy nginx.conf
+      template:
+        dest: /etc/nginx/sites-enabled/{{ domain }}
+        src: nginx.site.conf
+        become: root
+        mode: '0644'
+      notify: restart nginx
+        
+    handlers:
+      - name: restart nginx
+        service:
+          name: nginx
+          state: restarted
+        

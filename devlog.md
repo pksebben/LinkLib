@@ -9,6 +9,7 @@
 	This is a roadmap to getting the site prod-ready.
 	
  - Deploy to gcp instance
+   - Set up deployment script
  - Oauth
  - Styling
  - Run the scraper again (right before deployment)
