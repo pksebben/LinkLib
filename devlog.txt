@@ -1,4 +1,0 @@
-flesh out the readme a little more
-
-tests!
-
