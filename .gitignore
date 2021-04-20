@@ -5,3 +5,5 @@ linklibvenv/
 foo.db
 streamlist.json
 pretty/
+.pants.d
+.pids
