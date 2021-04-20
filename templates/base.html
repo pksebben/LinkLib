@@ -246,6 +246,7 @@ async function markVisited(event) {
 
 	 // Convert the response data to JSON
 	 response.json().then((data) => {
+	     console.log("dot json");
 
 	     console.log(data);
 	     // If empty JSON, exit the function
@@ -286,7 +287,7 @@ async function markVisited(event) {
 		 template_clone.querySelector(".link-page-link").href = `/link/${link_id}`; 
 
 		 template_clone.querySelector(".link-tags").innerHTML = "";
-		 template_clone.querySelector(".link-message-link").href = `https://recurse.zulipchat.com/#narrow/message/${data[i]['message_id']}`;
+		 template_clone.querySelector(".link-message-link").href = `https://recurse.zulipchat.com/#narrow/streams/public/id/${data[i]['message_id']}`;
 		 template_clone.querySelector(".link-description").innerHTML = "";
 
 		 // Append template to dom
@@ -322,6 +323,7 @@ async function markVisited(event) {
      // and we don't need to do anything. Exit the function
      if (entries[0].intersectionRatio <= 0) {
 	 return;
+	 
      }
 
      // Call the loadItems function

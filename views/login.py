@@ -9,7 +9,7 @@ bp = flask.Blueprint("login_view", __name__,  template_folder = "templates")
 @bp.route('/login', methods = ['POST', 'GET'])
 def login():
     if current_user.is_authenticated:
-        return redirect('/blogs')
+        return flask.redirect('/')
      
     if request.method == 'POST':
         email = request.form['email']

@@ -19,7 +19,7 @@ def link_page(link_id):
 
     link = db.sqla.session.query(models.Link).get(link_id)
 
-    tags = link.tags.split(",")
+    tags = link.tags
 
     comment = {}
     

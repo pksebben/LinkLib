@@ -19,8 +19,9 @@ Index.  The main page.
 bp = flask.Blueprint('index', __name__, template_folder="templates")
 
 
-@login_required
+# TODO: Login_required isn't routing properly on index load
 @bp.route('/', methods=["GET"])
+@login_required
 def index():
     streams = json.load(open("streams.json"))
     return render_template("index.html", streams=streams["streams"])

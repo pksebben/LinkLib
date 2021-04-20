@@ -36,9 +36,14 @@ ENDPOINT = "tcp:8081"
 
 
 @app.after_request
-def after_request(res):
+def log_request(response):
     """log all requests"""
     logger = logging.getLogger()
+    logger.info(flask.request)
+    logger.info(response)
+
+    return response
+    
 
 def main():
     """perform a grabbag of necessary initialization and run the app"""
