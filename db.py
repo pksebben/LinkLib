@@ -9,7 +9,7 @@ To invoke db sessions:
 db.sqla.session.query(models.Foo)
 """
 
-CONN_STRING = "sqlite:///link.db"
+CONN_STRING = "sqlite:///../linklib_db/link.db"
 
 sqla = None
 
