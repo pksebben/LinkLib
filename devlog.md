@@ -24,6 +24,13 @@
 	 - style them
 	 - unit test all of it
 	 
+	 
+### NEXT: Restructuring
+	 
+	this section labeled as currently under dev.  Do this first
+	
+It has become apparent that keeping things such as config and db in the same folder as the site files presents a problem when pulling from VC.  So, we are going to need a directory for those (and we need to tell the code to respect that.)
+	 
 ### Other TODOs
 
 	These are things that need to happen, represented as a grabbag of 'stuff' - just to make it easy to put stuff in here	
