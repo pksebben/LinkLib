@@ -7,3 +7,4 @@ streamlist.json
 pretty/
 .pants.d
 .pids
+config.json
