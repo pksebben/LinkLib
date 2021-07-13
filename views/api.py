@@ -45,7 +45,7 @@ def post_comment():
 
     The fields for userid, timestamp, and id(primary key) are populated below, or by the db.
     """
-    log(flask.request)
+    # log(flask.request)
     print("New comment added")
 
     # populate comment fields
@@ -53,22 +53,34 @@ def post_comment():
     parent_id = request.form.get('parent_id', None)
     user_id = current_user.id
     timestamp = datetime.datetime.now()
+    link_id = request.form.get('link_id', None)
 
     # null the parent id if empty string.
     if parent_id == "":
         parent_id = None
 
+    if link_id == "":
+        link_id = None
+
     # log comment entry
-    print("parent id: {} \nuser id: {}\ncontent: {}\ntimestamp: {}\n".format(parent_id, user_id, content, timestamp))
+    print("parent id: {} \nuser id: {}\ncontent: {}\ntimestamp: {}\nlink id: {}".format(parent_id, user_id, content, timestamp, link_id))
 
     # create the comment object
     comment = models.Comment(
         timestamp = timestamp,
         user_id = user_id,
         parent_id = parent_id,
-        content = content
+        content = content,
+        link_id = link_id
     )
 
+    if link_id:
+        link = db.sqla.session.query(models.Link).get(link_id)
+        link.root_comments.append(comment)
+        link_url = link.url
+    else:
+        link_url = None
+        
     # try to find the parent. If it exists, append this comment to it.
     parent = db.sqla.session.query(models.Comment).get(parent_id)
     if parent:    
@@ -83,12 +95,11 @@ def post_comment():
         "id" : comment.id,
         "author" : db.sqla.session.query(models.User).get(user_id).name,
         "timestamp" : timestamp,
-        "content" : content
+        "content" : content,
+        "link" : link_url
     }
     return flask.jsonify(res)
 
-# pretty sure this next bit was a typo
-# @bp.route('/')
 
 
 @login_required

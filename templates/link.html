@@ -18,26 +18,27 @@
 	</ul>
 	
     </div>
-    <div class="link-view-comments">
+    <!-- This is broken.  I think it might be broken in the macro for "comment_input", so
+	 I'm replacing it with a macro.comment, but that might need to be rolled back.  I no longer
+	 understand what the hell all this javascript is doing, so I should comment as I go through-->
+    <div class="link-view-add-root-comment comment-child-area">
+	{{ macro.add_root_comment(link.id) }}
+    </div>
+    
+    <div class="display-area link-view-comments" id="display-area">
 
-	{{ macro.comment_input() }}  <!-- is this the right macro? -->
 
-
-	{% for comment in comments %}
+	{% for comment in root_comments %}
 	
+		{{ macro.comment(content=comment.content, author=comment.author, id=comment.id,) }}  <!-- is this the right macro? It seems to work, kind of, but it needs data to be stable. -->
+
 	{% endfor %}
-	<div class="comment">
-	    <div class="comment-header">
-		<p class="comment-timestamp">{{ comment.timestamp }}</p>
-		<p class="comment-user">{{ comment.user }}</p>
-	    </div>
-	    <p class="comment-body">{{ comment.body }}</p>
-	    <div class="comment-reply-section">
-		<!-- this section should replace itself on click with a textarea to add a reply -->
-		<button class="comment-reply-button" id="comment-reply">reply</button>
-	    </div>
-	</div>
 	
     </div>
 </div>
+
+<script>
+ const form = document.queryselector(".root-comment-form");
+ form.addEventListener("submit", postCommentHandler);
+</script>
 {% endblock %}

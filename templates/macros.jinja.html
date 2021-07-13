@@ -106,3 +106,15 @@
     <input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
 </form>
 {% endmacro %}
+
+
+{% macro add_root_comment(link_id) %}
+<form class="root-comment-form" action="/api/comment/submit" method="post"
+      onsubmit="postComment(event); return false;"
+>
+    <input type="hidden" value="{{ link_id }}" name="link_id">
+    <input type="hidden" value="" name="parent_id">
+    <textarea class="comment-form-textarea" wrap="hard" name="content"></textarea>
+    <input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
+</form>
+{% endmacro %}

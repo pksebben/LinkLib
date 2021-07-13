@@ -24,4 +24,18 @@ bp = flask.Blueprint('index', __name__, template_folder="templates")
 @login_required
 def index():
     streams = json.load(open("streams.json"))
-    return render_template("index.html", streams=streams["streams"])
+    streams = cull_streams(streams)
+    return render_template("index.html", streams=streams)
+
+# TODO: Stream culling takes a while.  This should be performed more as a cron, NOT on every page load
+
+def cull_streams(streams):
+    new_stream_list = filter(is_stream_populated, streams["streams"])
+    return list(new_stream_list)
+        
+
+def is_stream_populated(stream):
+    if db.sqla.session.query(models.Link).filter(models.Link.stream_id == stream["stream_id"]).first() is not None:
+        return True
+    else:
+        return False

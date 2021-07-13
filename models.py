@@ -54,18 +54,19 @@ class Link(Base):
     __tablename__ = "link"
     
     id = Column(Integer, primary_key=True)
-
-    # generated data
+    timestamp = Column(Integer)  # TODO: make me a date
     url = Column(String(80))
+    
+    # generated data
     domain = Column(String(80))
     stream_id = Column(Integer)
     message_id = Column(Integer)
     relevance_score = Column(Integer)
-    timestamp = Column(Integer)  # TODO: make me a date
     tags = relationship("Tag",
                         secondary=link_to_tag,
-                        backref="links") 
-
+                        backref="links")
+    root_comments = relationship("Comment", backref="link")
+    
     # user-defined data
     # desc = Column(Text)
 
@@ -91,6 +92,7 @@ class CommentSchema(Schema):
     
     user_id = fields.Int()
     parent_id = fields.Int(allow_none=True)
+    link_id = fields.Int(allow_none=True)
 
 class Comment(Base):
 
@@ -107,12 +109,15 @@ class Comment(Base):
     user_id = Column(Integer, ForeignKey("user.id"))
     author = relationship("User", back_populates="comments")
 
+    # Link relationships, for root-level comments
+    link_id = Column(Integer, ForeignKey('link.id'), nullable = True)
+    
     # Tree behavior - subcomments and subcomments of subcomments
     parent_id = Column(Integer, ForeignKey("comment.id"), index=True, nullable=True)
     children = relationship('Comment', back_populates="parent", lazy='joined')
     parent = relationship("Comment", remote_side=id, back_populates="children", lazy='joined')
 
-
+# TODO: The 'link' and 'comment' schema should be merged, to allow for flexible contact between the two.
 
 class UserSchema(Schema):
     id = fields.Int()
@@ -137,3 +142,20 @@ class User(UserMixin, Base):
     def check_password(self,password):
         return check_password_hash(self.password_hash,password)
     
+# TODO: deprecate 
+class Content(Base):
+    """the master class for content.
+    the idea here is to create an 'information node'
+    that can flexibly used to model a hierarchy
+    of information and maps neatly to the rest of the domain model
+    
+    NOTE: This is probably overengineering.
+    what we really need is a mechanism for root-level comments.
+    """
+    
+    __tablename__ = "content"
+
+    id = Column(Integer, primary_key = True)
+    timestamp = Column(Integer, nullable = False)
+    # TODO: How do we model content?
+    score = Column(Integer, default = 0, nullable = False)

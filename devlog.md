@@ -149,8 +149,15 @@ Lost again.  I'm just going to follow this with some format of TODO for the next
 
 My workflow is tough to get back into. What I would really love is some sort of init script, that transparently prints each step it's going through just so I have some kind of reminder re: what the hell I'm working on.
 
+### Friday, June 25, 2021
 
+So, taking a look at this project again, and I'm noticing that the lack of decoupling is part of why I have trouble getting back into the project.  Here are the core issues, as I see them:
+ - Lack of decoupling: 'app.py' is managing a lot, from my perspective.  The layout of the project doesn't make *intuitive* sense to me, so there's extra burden when getting back into a workflow.
+ - Naming problems:  I did not know what I was doing at the beginning of this project vis a vis names, and also there are bits of code in here that are from Ian.  I should look into changing things / refactoring
+ - Server logic and app logic are bundled:  I should pick out the server configs and put em in their own thing
+ - The repo is le mess: Everything seems to live in the root dir.  This is bad.
 
 NEXT
 ---------------
 TODO NEXT: migrate the db
+TODO: Implement behavior that 'hides' empty streams
