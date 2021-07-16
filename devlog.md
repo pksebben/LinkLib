@@ -24,6 +24,15 @@
 	 - style them
 	 - unit test all of it
 	 
+#### [ ] Get the site show-and-tell ready
+	 - Code cleanup
+		 [ ] - Put stuff in the appropriate folders / clean up directory structure
+		 [ ] - Fix container.py so it's *my code*.
+		 [ ] - Crawl through each and every file to ensure that it's appropriately refactored / refactor as necessary
+		 [ ] - Clean for style / code smell
+	
+
+	
 	 
 ### NEXT: Restructuring
 	 
