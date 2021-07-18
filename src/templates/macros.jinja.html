@@ -1,0 +1,120 @@
+{% macro old_comment(content, author, timestamp) %}
+<div>
+    <p>{{ content }}</p>
+    <p>{{ author }}</p>
+    <p>{{ timestamp }}</p>
+</div>
+{% endmacro%}
+
+{% macro comment_input(parent_id=0) %}
+<div>
+    <form action ="/api/post" method="post" class="comment-form">
+	<input type="hidden" value={{ parent_id }} id="parent_id" />
+	<input id="content" type="textarea">
+	<input type="submit">
+    </form>
+</div>
+{% endmacro %}
+
+
+<!-- THIS IS THE TEMPLATE FOR COMMENTS.  NEEDED FOR AJAX POSTING, MAYBE MORE ITF -->
+<comment class="comment" id="comment-template">
+    <div class="comment-body">
+	<div class="comment-header">
+	    <div class="comment-at-box">
+		<div class="comment-at-vote-box"><button
+						     class="upvote"><|</button><button
+										   class="downvote">|></button></div>
+		<p class="comment-timestamp headtext">timestamp</p>
+		<p class="comment-author headtext">author</p>
+	    </div>
+	    <p class="comment-id headtext">id</p>
+	</div>
+	<p class="comment-content">content</p>
+    </div>
+
+    <!-- Comment Actions -->
+    <div class="comment-action-box">
+	<button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
+	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+    </div>
+
+    <!-- Comment Reply Area -->
+    <div class="comment-reply-area">
+	<form class="comment-form" action="/api/comment/submit" method="post">
+	    <input type="hidden" value="{{ id }}" id="parent_id" name="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content" name="content"></textarea>
+	    <input class="comment-form-submit" type="submit" value="post comment">
+	</form>
+    </div>
+    <div class="comment-child-area child-area">
+    </div>
+</comment>
+
+{% macro comment(content,author,timestamp,id,children=None) %}
+<div class="comment" id="comment-{{ id }}">
+    <div class="comment-body">
+	<div class="comment-header">
+	    <div class="comment-at-box">
+		<div class="comment-at-vote-box"><button
+						     class="upvote"><|</button><button
+										   class="downvote">|></button></div>
+		<p class="comment-timestamp headtext">{{ timestamp }}</p>
+		<p class="comment-author headtext">{{ author }}</p>
+	    </div>
+	    <p class="comment-id headtext">{{ id }}</p>
+	</div>
+	<p class="comment-content">{{ content }}</p>
+    </div>
+
+    <!-- Comment Actions -->
+    <div class="comment-action-box">
+	<button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
+	<button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+    </div>
+
+    <!-- Comment Reply Area -->
+    <div class="comment-reply-area">
+	<form class="comment-form" action="/api/comment/submit" method="post">
+	    <input type="hidden" value="{{ id }}" id="comment-{{id}}-form" name="parent_id">
+	    <textarea class="comment-form-textarea" wrap="hard" id="content-{{id}}" name="content"></textarea>
+	    <input class="comment-form-submit" type="submit" value="post comment" >
+	</form>
+    </div>
+    <div class="comment-child-area">
+	{% if children %}
+	{% for child_comment in children %}
+	{{ comment(child_comment.content, child_comment.author.name, child_comment.timestamp, child_comment.id, child_comment.children) }}
+	{% endfor %}
+	{% endif %}
+    </div>
+</div>
+{% endmacro %}
+
+
+
+
+
+{% macro add_comment(parent_id) %}
+<form
+    class="comment-form" action="/api/comment/submit" method="post"
+    onsubmit="postComment(event); return false;"
+>
+    <!-- Note: when accepting this form data, you must provide username in flask -->
+    <input type="hidden" value="{{ parent_id }}" name="parent_id">
+    <textarea class="comment-form-textarea" wrap="hard" name="content"></textarea>
+    <input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
+</form>
+{% endmacro %}
+
+
+{% macro add_root_comment(link_id) %}
+<form class="root-comment-form" action="/api/comment/submit" method="post"
+      onsubmit="postComment(event); return false;"
+>
+    <input type="hidden" value="{{ link_id }}" name="link_id">
+    <input type="hidden" value="" name="parent_id">
+    <textarea class="comment-form-textarea" wrap="hard" name="content"></textarea>
+    <input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
+</form>
+{% endmacro %}

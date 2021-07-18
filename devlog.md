@@ -166,6 +166,24 @@ So, taking a look at this project again, and I'm noticing that the lack of decou
  - Server logic and app logic are bundled:  I should pick out the server configs and put em in their own thing
  - The repo is le mess: Everything seems to live in the root dir.  This is bad.
 
+### Friday, July 16, 2021
+
+I need to step back and do some figuring.  This may be a bigger ask than I'm giving it credit for; let's do a little React-ing and see where that takes us.
+
+### Sunday, July 18, 2021
+
+So it looks like I'm still on 'code cleanup'.  I want to try and get that done, and then perhaps focus on the actual presentation, what things I want to try and show off (that I'm proud of etc.).
+
+I'm going to jump out and check that React / Ruby tutorial to see if the React side is fully decoupled.  Perhaps that will give me a way to 'port' more of my frontend to React and get it working that way.
+
+
+PRESENTATION TODO
+--------------------
+[ ] Finish code cleanup / make it pretty enough to show off
+[ ] Get the working copy working enough to show what it looks like without embarrasment
+[ ] Get that config module *correct*
+[ ] Add tests
+
 NEXT
 ---------------
 TODO NEXT: migrate the db

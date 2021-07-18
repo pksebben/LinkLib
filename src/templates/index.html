@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="static/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device_width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+{% block content %}
+<div class="site-base">
+    <div class="navbar">
+	<div class="navbar-titlebar">
+	    <h3 class="navbar-site-title">Recurse Link Library</h3>
+	    <div class="navbar-userbox">
+		<p>Avatar will go here</p>
+		<p>{{ current_user.name }}</p>
+	    </div>
+	    
+	</div>
+	<select class="link-buffer-selector" id="stream-selector" onchange=reload_linkbuffer()>
+	    {% for stream in streams %}
+	    <option value={{ stream["stream_id"] }}>{{ stream["name"] }}</option>
+	    {% endfor %}
+	</select>
+    </div>
+
+
+
+
+    <div id="master-view-box">
+
+	<div id="scroller">
+	    
+	    <template class="link-template" id="link-template">
+		<div class="link" data-linkid="unset">
+		    <a class="link-url-header" id="uri" target="_blank">link.url</a>
+		    <a class="link-page-link" id="link-page-link">discussion</a>
+		    <ul class="link-tags">tag for tag in link.tags</ul>
+		    <a class="link-message-link" id="link-message-link">zulip context</a>
+		    <p class="link-description">link.description</p>
+		    <div class="link-comment-section"></div>
+		    <div class="link-comment-section-add-comment"></div>
+		</div>
+	    </template>
+	    <div class="link-buffer">
+	    </div>
+	    <h5 class="load-status" id="load-status">loading...</h5>
+	    <div class="intersection_observer" id="sentinel">
+		<p>" "</p>
+		<div class="spinner-border" role="status"> </div>
+	    </div>
+
+	</div>
+    </div>
+</div>
+{% endblock %}

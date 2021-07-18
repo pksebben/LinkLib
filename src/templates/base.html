@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+{% import "macros.jinja.html" as macro %}
+<html>
+    <head>
+	<link rel="stylesheet" href={{ url_for('static', filename="styles.css" )}}>
+	{% block head %}
+	{% endblock %}
+    </head>
+    <body>
+
+	{% block content %}
+	{% endblock %}
+	<template class="comment-template">
+	    <div class="comment">
+		<div class="comment-body">
+		    <div class="comment-header">
+			<div class="comment-at-box">
+			    <div class="comment-at-vote-box"><button
+								 class="upvote"><|</button><button
+											       class="downvote">|></button></div>
+			    <p class="comment-timestamp headtext">{{ timestamp }}</p>
+			    <p class="comment-author headtext">{{ author }}</p>
+			</div>
+			<p class="comment-id headtext">{{ id }}</p>
+		    </div>
+		    <p class="comment-content">{{ content }}</p>
+		</div>
+
+		<!-- Comment Actions -->
+		<div class="comment-action-box">
+		    <button class="comment-action-hide" onClick="hideChildren('comment-{{id}}')">hide</button>
+		    <button class="comment-reply-button" id="button-test" onclick="showReplySection(this);">reply</button>
+		</div>
+
+		<!-- Comment Reply Area -->
+		<div class="comment-reply-area">
+		    <form class="comment-form" action="/api/comment/submit" method="post">
+			<input type="hidden" value="{{ id }}" id="comment-{{id}}-form" name="parent_id">
+			<textarea class="comment-form-textarea" wrap="hard" id="content-{{id}}" name="content"></textarea>
+			<input class="comment-form-submit" type="submit" value="post comment" onsubmit="postCommentHandler">
+		    </form>
+		</div>
+		<div class="comment-child-area child-area">
+		</div>
+	    </div>
+	</template>
+    </body>
+
+    <script>
+
+     console.log('script imported');
+
+     async function markVisited(event) {
+	 /* Mark pages visited.  Attaches to <a> in links. */
+	 console.log("marking link as visited");
+	 var link = event.target;
+	 console.log(link.parentElement);
+	 var link_id = link.parentElement.dataset.linkid;
+	 let url = "/api/markvisited/" + link_id;
+	 const res = await fetch(url); /* Does this need more information? */
+     }
+
+     var links = document.getElementsByClassName("link-url-header");
+     for (let i = 0; i < links.length; i++) {
+	 links[i].addEventListener("click", markVisited);
+	 console.log("added event listener to link");
+     }
+
+
+     var els = document.getElementsByClassName('comment-form');
+     for (let i = 0; i < els.length; i++) {
+	 els[i].addEventListener("submit", postCommentHandler);
+     }
+     
+     async function ajaxifyForm(event) {
+	 /* AJAXIFY FORM
+	    Overrides form behavior and returns json.  For consumption
+	    by appropriately crafted API endpoints (that return json in response to a post requeat)
+
+	    to apply to a form, select the form like so:
+
+	    const form = document.querySelector(".content-form");
+	    form.addEventListener("submit", postCommentHandler);
+
+	    (it may also be possible to use the pattern onsubmit="ajaxifyForm" in the html tag)
+	    
+	    this should override the form's native behavior and return 
+	    a json response from the submit comment api that represents
+	    the inserted comment, for use in ajax updating of the page.
+
+	    Because some jerk wrote a dumb spec, we also need to 'grab'
+	    the return of this function in another async function that 
+	    awaits it's value, because it would make too much sense
+	    to have a function that resolves promises by itself. See 
+	    boilerplate fix-for-dumb-laguage-quirk #284403319 below
+
+	    async function postCommentHandler(event) {
+	    const comment = await ajaxifyForm(event);
+	    console.log("you may do things with comment here.");
+	    }
+
+	    NOTE: This may be used anywhere we require turning a form 
+	    into an ajax call!
+	  */
+	 
+	 /* we don't want the usual behaviors (like reloading the page) */
+	 event.preventDefault();
+
+	 /* get the form, then populate a new FormData from it. */
+	 var form = event.target;
+	 var formData = new FormData(form);
+
+	 /* where is this form sending data? */
+	 var url = form.action;
+
+	 /* submit the request. Careful modifying this - it was the source of many a headache. */
+	 const res = await fetch(url, {
+	     method : 'POST',
+	     mode: 'cors',
+	     credentials: 'same-origin',
+	     cache : "no-cache",
+	     referrerPolicy: 'no-referrer',
+	     redirect: 'follow',
+	     body: formData,
+	 });
+
+	 /* check for errors and be loud about them */
+	 if (!res.ok) {
+	     alert("bad request");  /* change me to log */
+	     const message = "bad response: ${res.status}";
+	     throw new Error(message);
+	 }
+
+	 /* return. this second await may or may not be surpurflous. idc.  */
+	 const results = await res.json();
+	 return results;
+     }
+     
+     function createComment(comment) {
+	 /* TODO: we need to bubble parent_id into here somehow */
+
+	 /* check if browser supports templates */
+	 if ('content' in document.createElement('template')) {
+	     /* grab the comment template and inject comment data */
+
+	     /* TODO: make me look like a real comment */
+	     var template = document.querySelector('.comment-template');
+	     var clone = template.content.cloneNode(true);
+
+	     clone.querySelector('.comment-author').innerHTML = comment.author;
+	     clone.querySelector(".comment-timestamp").innerHTML = comment.timestamp;
+	     clone.querySelector(".comment-id").innerHTML = comment.id;
+	     clone.querySelector(".comment-content").innerHTML = comment.content;
+	 } else {
+	     var clone = "<h1 color='red'>IT DID NOT CLONE GUD</p>";
+	     const message = "It appears as if this browser does not support templates.";
+	     throw new Error(message);
+	 }
+	 return clone;
+     }
+
+
+     async function postCommentHandler(event) {
+	 /* send comment and retrieve json representation */
+	 const comment = await ajaxifyForm(event);
+
+	 console.log(event.target);
+	 /* CHANGE ME TO RETRIEVE THE CORRECT ELEMENT */
+	 var commentChildArea = event.target.parentElement.parentElement.querySelector('.comment-child-area');
+
+	 var template = createComment(comment);
+	 commentChildArea.appendChild(template);
+	 event.target.style.display = "none";
+     }
+
+     /* PREVIOUS CODE HAS BEEN TESTED AND WORKS */
+     
+     /* TODO: avoid needing to be explicit about the element in question */
+     function hideChildren(element) {
+	 var el = document.getElementById(element);
+
+	 var childarea = el.querySelector(".child-area");
+	 if (childarea.style.display != "none") {
+	     childarea.toggledisplay = childarea.style.display;
+	     childarea.style.display = "none";
+	 } else {
+	     childarea.style.display = childarea.toggledisplay;
+	 }
+     }
+
+     function showReplySection(showbutton) {
+	 var children = showbutton.parentElement.parentElement.children;
+
+	 for (var i=0; i < children.length; i++) {
+
+	     if (children[i].className == "comment-reply-area") {
+		 el = children[i];
+		 if (el.style.display == "inline-flex") {
+		     el.style.display = "none";
+		 } else {
+		     el.style.display = "inline-flex";
+		     ta = el.querySelector(".comment-form-textarea");
+		     ta.focus();
+		 }
+	     }
+	 }
+     }
+
+
+
+     /* INFINITE LAZY LOADING CODE  */
+
+     // Get references to the dom elements
+     var scroller = document.querySelector("#scroller");
+     var template = document.querySelector('#link-template');
+     var loaded = document.querySelector("#loaded");
+     var sentinel = document.querySelector('#sentinel');
+     var linkbuffer = document.querySelector('.link-buffer');
+     var loadstatus = document.querySelector('#load-status');
+
+     // Set a counter to count the items loaded
+     var counter = 0;
+
+     // Function to request new items and render to the dom
+
+
+     function reload_linkbuffer() {
+	 linkbuffer.innerHTML = '';
+	 console.log('clearing the link buffer');
+	 loadItems();
+	 
+     }
+     function loadItems() {
+
+	 // Use fetch to request data and pass the counter value in the QS
+	 selector = document.getElementById("stream-selector");
+	 streamid = selector.value;
+
+
+	 /* Debugging Corner */
+
+	 let req = `/load/${streamid}/${counter}`;
+
+	 console.log('request = ' + req);
+
+	 fetch(req).then((response) => {
+
+	     // Convert the response data to JSON
+	     response.json().then((data) => {
+		 console.log("dot json");
+
+		 console.log(data);
+		 // If empty JSON, exit the function
+		 if (!data.length) {
+		     loadstatus.innerHTML = "looks like that's all of them..."
+
+		     // Replace the spinner with "No more posts"
+		     
+		     return;
+		 }
+
+
+		 // Iterate over the items in the response
+		 for (var i = 0; i < data.length; i++) {
+
+		     console.log('creating elements');
+
+		     /* TODO: add 'visited' behavior here */
+
+
+		     // Clone the HTML template
+		     let template_clone = template.content.cloneNode(true);
+
+		     let link_id = data[i]['id'];
+
+		     // Query & update the template content
+		     template_clone.querySelector("#uri").innerHTML = data[i]['url'];
+		     
+		     link_url = template_clone.querySelector("#uri")
+		     link_url.href = data[i]['url'];
+
+		     /* Add 'visited' markers to left and middle click */
+		     link_url.addEventListener("click", markVisited);
+		     link_url.addEventListener("auxclick", markVisited);
+
+		     template_clone.querySelector(".link").dataset.linkid = link_id;
+
+		     template_clone.querySelector(".link-page-link").href = `/link/${link_id}`; 
+
+		     template_clone.querySelector(".link-tags").innerHTML = "";
+		     template_clone.querySelector(".link-message-link").href = `https://recurse.zulipchat.com/#narrow/streams/public/id/${data[i]['message_id']}`;
+		     template_clone.querySelector(".link-description").innerHTML = "";
+
+		     // Append template to dom
+		     linkbuffer.appendChild(template_clone);
+
+		     // Increment the counter
+		     counter += 1;
+		     loadstatus.innerHTML = "loading links..."
+
+
+		 }
+	     })
+	 })
+     }
+
+     let options ={
+	 root: document.querySelector('#master-view-box'),
+	 rootMargin: '0px',
+	 threshold: 0
+     }
+
+     // Create a new IntersectionObserver instance
+     var intersectionObserver = new IntersectionObserver(entries => {
+
+	 // Uncomment below to see the entry.intersectionRatio when
+	 // the sentinel comes into view
+
+	 entries.forEach(entry => {
+	     console.log(entry.intersectionRatio);
+	 })
+
+	 // If intersectionRatio is 0, the sentinel is out of view
+	 // and we don't need to do anything. Exit the function
+	 if (entries[0].intersectionRatio <= 0) {
+	     return;
+	     
+	 }
+
+	 // Call the loadItems function
+	 console.log("calling loaditems");
+	 loadItems();
+
+     }, options);
+
+     // Instruct the IntersectionObserver to watch the sentinel
+     intersectionObserver.observe(sentinel);
+
+    </script>
+
+
+</html>
+
+<!-- TEMPLATE TODOs -->
+<!-- Fix comment display to conform to better design -->
