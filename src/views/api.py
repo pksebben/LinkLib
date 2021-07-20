@@ -5,6 +5,7 @@ from flask_login import login_required
 from flask_login import current_user
 from flask import request, render_template, jsonify, make_response
 
+from flask_cors import CORS, cross_origin
 
 """
 API
@@ -115,6 +116,22 @@ def mark_visited(linkid):
     
 
 # @login_required
+
+#DELETEME
+@cross_origin
+@bp.route('/testpost', methods=['POST'])
+def test_post_from_js():
+    '''
+    Test module to sanity check post requests from React.
+    '''
+    inspector = "request.data: /n"
+    inspector += str(request.data)
+    inspector += "/nrequest.values: /n"
+    inspector += str(request.values)
+    print(inspector)
+    return inspector, 200
+
+@cross_origin
 @bp.route('/load', methods=['POST'])
 def load_content():
     '''
@@ -138,8 +155,8 @@ def load_content():
         return "bad query", 500
 
 
+@cross_origin
 @bp.route('/load/<streamid>/<counter>', methods=["GET"])
-@login_required
 def load_links(streamid, counter):
     '''
     TODO: fix the name

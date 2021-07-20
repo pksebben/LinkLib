@@ -27,12 +27,15 @@ from flask_humanize import Humanize #
 from flask import json
 from flask_login import LoginManager
 from flask.logging import default_handler
+from flask_cors import CORS, cross_origin
 
 from views import index, link, register, api, testpage
 from views import login as login_view
 import db, container, models, config
 
 app = flask.Flask(__name__, static_folder='static')
+cors=CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.conf = config.Config()
 
 DEBUG = True

@@ -15,11 +15,16 @@ class Config(object):
         if no database path is provided, attempt to find one, 
         walking from one level up (in case the app was run from "src")
         '''
-        for root, dirs, files in os.walk(os.path.relpath("..",os.getcwd())):
-            if "linklib.db" in files:
-                return os.path.join(root, "linklib.db")
-            else:
-                raise DBNotFoundError
+        default_db_name = "link.db"
+
+        for root, dirs, files in os.walk(os.getcwd()):
+            print("root: " + root)
+            print(dirs)
+            print(files)
+            if default_db_name in files:
+                return os.path.join(root, default_db_name)
+            # else:
+            #     raise DBNotFoundError("db: " + default_db_name)
 
 class DBNotFoundError(Exception):
     pass
