@@ -30,7 +30,6 @@ bp = flask.Blueprint("api", __name__,  template_folder="templates")
 
 
 # Initialize variables for load_
-stream_id = 1
 posts = 500  # num posts to generate
 quantity = 20  # num posts to return per request
 schema = models.LinkSchema(many=True)
@@ -168,14 +167,13 @@ def load_links(streamid, counter):
     2. 
     '''
     
-    global stream_id
-    global links
+    stream_id = None
+    # global links
+    links = None
     if flask.request:
         if stream_id == streamid:
             """
             This checks if streamid is provided and uses a default (set up top) if not.
-
-            I don't like this way of doing business.  It makes the code unclear.
             """
             print("loading links from stream: " + str(stream_id) )
             # counter = int(flask.request.args.get("c"))

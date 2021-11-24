@@ -30,7 +30,7 @@
 
 	{% for comment in root_comments %}
 	
-		{{ macro.comment(content=comment.content, author=comment.author, id=comment.id,) }}  <!-- is this the right macro? It seems to work, kind of, but it needs data to be stable. -->
+		{{ macro.comment(content=comment.content, author=comment.author.name, timestamp=comment.timestamp, id=comment.id, children=comment.children) }}  <!-- is this the right macro? It seems to work, kind of, but it needs data to be stable. -->
 
 	{% endfor %}
 	

@@ -67,8 +67,6 @@ class Link(Base):
                         backref="links")
     root_comments = relationship("Comment", backref="link")
     
-    # user-defined data
-    # desc = Column(Text)
 
 
 class TagSchema(Schema):

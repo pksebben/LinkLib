@@ -22,6 +22,6 @@ def link_page(link_id):
     tags = link.tags
 
     root_comments = link.root_comments
-    
+
     return render_template("link.html", link = link,  root_comments = root_comments)
     
